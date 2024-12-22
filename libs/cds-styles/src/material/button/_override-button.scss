@@ -1,0 +1,114 @@
+@mixin main() {
+  .mat-mdc-button,
+  .mat-mdc-raised-button,
+  .mat-mdc-unelevated-button,
+  .mat-mdc-outlined-button,
+  .mdc-icon-button {
+    min-width: auto !important;
+    // Use `mat-mdc-button-base` to increase the specificity over the button's structural styles.
+    &.mat-mdc-button-base,
+    &.mat-mdc-icon-button {
+      // Necessary to override mat-button rippple color
+      --mat-mdc-button-persistent-ripple-color: transparent;
+      --mat-mdc-button-ripple-color: transparent;
+      // size medium by default
+      height: var(--button-height-medium-default);
+      padding: var(--button-padding-y-medium-default)
+        var(--button-padding-x-medium-default);
+      // global overrides
+      outline: var(--button-border-none);
+      border: var(--button-border-none);
+      border-radius: var(--radius-button-medium);
+      box-shadow: none;
+      white-space: nowrap;
+
+      &:hover,
+      &:active {
+        // Necessary for overriding mat-raised-button's hover and active styles
+        box-shadow: none;
+      }
+
+      &:disabled {
+        border: none !important;
+      }
+
+      .mat-mdc-button-touch-target {
+        height: inherit;
+      }
+
+      &[cds-size='large'] {
+        height: var(--button-height-large-default);
+        padding: var(--button-padding-y-large-default)
+          var(--button-padding-x-large-default);
+      }
+      &[cds-size='small'] {
+        height: var(--button-height-small-default);
+        padding: var(--button-padding-y-small-default)
+          var(--button-padding-x-small-default);
+      }
+      &[cds-size='x-small'] {
+        border-radius: var(--radius-button-xsmall);
+        height: var(--button-height-xsmall-default);
+        padding: var(--button-padding-y-xsmall-default)
+          var(--button-padding-x-xsmall-default);
+      }
+
+      &.mat-secondary {
+        border-style: solid;
+        border-width: var(--button-outline-width-sm);
+        &.cds-type-very-weak {
+          border: var(--button-border-none);
+        }
+      }
+    }
+  }
+
+  .mdc-icon-button {
+    &.mat-mdc-icon-button {
+      width: var(--button-height-medium-default);
+      --mat-mdc-button-persistent-ripple-color: transparent;
+      --mat-mdc-button-ripple-color: transparent;
+
+      padding: var(--button-icon-padding-medium-default);
+
+      &[cds-size='large'] {
+        height: var(--button-height-large-default);
+        width: var(--button-height-large-default);
+        padding: var(--button-icon-padding-large-default);
+      }
+      &[cds-size='small'] {
+        height: var(--button-height-small-default);
+        width: var(--button-height-small-default);
+        padding: var(--button-icon-padding-small-default);
+      }
+      &[cds-size='x-small'] {
+        height: var(--button-height-xsmall-default);
+        width: var(--button-height-xsmall-default);
+        padding: var(--button-icon-padding-xsmall-default);
+      }
+      &.mat-secondary {
+        padding: var(--button-icon-secondary-weak-padding-medium-default);
+        &[cds-size='large'] {
+          padding: var(--button-icon-secondary-weak-padding-large-default);
+        }
+        &[cds-size='small'] {
+          padding: var(--button-icon-secondary-weak-padding-small-default);
+        }
+        &[cds-size='x-small'] {
+          padding: var(--button-icon-secondary-weak-padding-xsmall-default);
+        }
+      }
+    }
+  }
+
+  .mat-mdc-button {
+    > .mat-icon {
+      margin-right: var(--spacing-0-5) !important;
+    }
+
+    .mdc-button__label + .mat-icon {
+      margin-left: var(--spacing-0-5) !important;
+      margin-right: 0 !important;
+    }
+  }
+}

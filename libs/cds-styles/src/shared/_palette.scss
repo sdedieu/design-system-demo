@@ -1,0 +1,42 @@
+$material-palette-primary: (
+  // 0 doesn't exist in palettes, using 50 instead
+    50: var(--primary-0),
+  100: var(--primary-1),
+  200: var(--primary-2),
+  300: var(--primary-3),
+  400: var(--primary-4),
+  500: var(--primary-5),
+  600: var(--primary-6),
+  700: var(--primary-7),
+  800: var(--primary-8),
+  900: var(--primary-9),
+  contrast: (),
+);
+
+$material-palette-accent: (
+  50: var(--accent-0),
+  100: var(--accent-1),
+  200: var(--accent-2),
+  300: var(--accent-3),
+  400: var(--accent-4),
+  500: var(--accent-5),
+  600: var(--accent-6),
+  700: var(--accent-7),
+  800: var(--accent-8),
+  900: var(--accent-9),
+  contrast: (),
+);
+
+$material-palette-warn: (
+  50: var(--warn-0),
+  100: var(--warn-1),
+  200: var(--warn-2),
+  300: var(--warn-3),
+  400: var(--warn-4),
+  500: var(--warn-5),
+  600: var(--warn-6),
+  700: var(--warn-7),
+  800: var(--warn-8),
+  900: var(--warn-9),
+  contrast: (),
+);

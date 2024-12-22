@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+@import './common';
+
+$nani-light-theme: mat.define-light-theme((color: (primary: $nani-primary,
+                accent: $nani-accent,
+                warn: $nani-warn,
+            ),
+            typography: $nani-typography-config,
+            density: 0,
+        ));

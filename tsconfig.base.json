@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@cds-library": [
+        "libs/cds-library/src/index.ts"
+      ],
+      "@cds-styles": [
+        "libs/cds-styles/src/index.ts"
+      ],
+      "campaigns/Routes": [
+        "apps/campaigns/src/app/remote-entry/entry.routes.ts"
+      ],
+      "settings/Routes": [
+        "apps/settings/src/app/remote-entry/entry.routes.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}
