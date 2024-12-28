@@ -7,6 +7,7 @@
     ]
   },
   "assets": [
-    "src/nani-light.scss"
+    "src/nani-light.scss",
+    "tailwind.config.js"
   ]
 }

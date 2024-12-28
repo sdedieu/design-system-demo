@@ -10,7 +10,11 @@
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
-        "command": "npx sass --load-path=node_modules libs/cds-styles/src:dist/cds-styles --no-source-map"
+        "commands": [
+          "npx sass --load-path=node_modules libs/cds-styles/src:dist/cds-styles --no-source-map",
+          "cp libs/cds-styles/tailwind.config.js dist/cds-styles/tailwind.config.js",
+          "cp -r libs/cds-styles/src/themes/fonts/assets dist/cds-styles/assets"
+        ]
       }
     },
     "lint": {
