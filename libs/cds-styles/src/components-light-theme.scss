@@ -1,6 +1,0 @@
-@use '@angular/material/button/button-theme' as mat-button-theme;
-
-@include mat-button-theme.theme($nani-light-theme);
-
-@include button-override-main();
-@include button-theme($nani-light-theme);

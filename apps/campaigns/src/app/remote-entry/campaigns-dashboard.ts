@@ -5,7 +5,11 @@ import { CdsButtonModule } from "@cds-library";
     imports: [CdsButtonModule],
     selector: 'ds-cmp-campaigns-dashboard',
     template: `<h1>Campaigns</h1>
-    <button mat-flat-button>Button</button>
+    <div class="flex gap-1">
+        <button mat-flat-button>Button</button>
+        <button cds-size="small" mat-flat-button>Button</button>
+    </div>
     `
 })
-export class CampaignsDashboard { }
+export class CampaignsDashboard {
+}

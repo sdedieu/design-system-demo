@@ -6,11 +6,12 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx sass --load-path=node_modules libs/cds-styles/src:dist/cds-styles --no-source-map"
+      }
     },
     "lint": {
       "executor": "@nx/eslint:lint"

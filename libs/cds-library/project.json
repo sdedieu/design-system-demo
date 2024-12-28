@@ -6,9 +6,29 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/{projectRoot}"
+      ],
+      "options": {
+        "project": "libs/cds-library/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/cds-library/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/cds-library/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "libs/cds-library/jest.config.ts"
       }

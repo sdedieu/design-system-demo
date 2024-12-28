@@ -28,7 +28,7 @@
         ],
         "styles": [
           "apps/campaigns/src/styles.scss",
-          "node_modules/@angular/material/prebuilt-themes/cyan-orange.css"
+          "dist/cds-styles/nani-light.css"
         ],
         "scripts": [],
         "customWebpackConfig": {

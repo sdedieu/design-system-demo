@@ -1,0 +1,95 @@
+// Note that file is public and can be imported by other library (e.g: relook)
+:root,
+:host {
+  /*
+      Palettes - core
+  */
+  --palette-charcoal-50: #fafafb;
+  --palette-charcoal-100: #f2f2f3;
+  --palette-charcoal-200: #e2e4e7;
+  --palette-charcoal-300: #cbcdd2;
+  --palette-charcoal-400: #b3b7be;
+  --palette-charcoal-500: #848a95;
+  --palette-charcoal-600: #6c717a;
+  --palette-charcoal-700: #54585f;
+  --palette-charcoal-800: #3c3f44;
+  --palette-charcoal-900: #242629;
+  --palette-charcoal-0: #ffffff;
+
+  --palette-jade-50: #f0fff8;
+  --palette-jade-100: #dcffee;
+  --palette-jade-200: #c0f3db;
+  --palette-jade-300: #91e8be;
+  --palette-jade-400: #61dca1;
+  --palette-jade-500: #02c567;
+  --palette-jade-600: #029e52;
+  --palette-jade-700: #01763e;
+  --palette-jade-800: #014f29;
+  --palette-jade-900: #002715;
+  --palette-jade-0: #ffffff;
+
+  --palette-lavender-50: #fbf9fe;
+  --palette-lavender-100: #f2ecfc;
+  --palette-lavender-200: #e9e0fb;
+  --palette-lavender-300: #d8c7f7;
+  --palette-lavender-400: #c6adf4;
+  --palette-lavender-500: #a37bed;
+  --palette-lavender-600: #8663c5;
+  --palette-lavender-700: #694c9e;
+  --palette-lavender-800: #4b3476;
+  --palette-lavender-900: #2e1d4f;
+  --palette-lavender-0: #ffffff;
+
+  --palette-sand-50: #fffcf4;
+  --palette-sand-100: #fff7e3;
+  --palette-sand-200: #fff3d2;
+  --palette-sand-300: #ffe9b1;
+  --palette-sand-400: #ffe08f;
+  --palette-sand-500: #ffcd4c;
+  --palette-sand-600: #d2a83d;
+  --palette-sand-700: #a5842e;
+  --palette-sand-800: #785f1e;
+  --palette-sand-900: #352808;
+  --palette-sand-0: #ffffff;
+
+  --palette-sky-50: #f5faff;
+  --palette-sky-100: #e5f0fb;
+  --palette-sky-200: #c4def7;
+  --palette-sky-300: #93c1ef;
+  --palette-sky-400: #62a5e6;
+  --palette-sky-500: #006cd6;
+  --palette-sky-600: #0056ab;
+  --palette-sky-700: #004180;
+  --palette-sky-800: #002b56;
+  --palette-sky-900: #00162b;
+  --palette-sky-0: #ffffff;
+
+  --palette-sunrise-50: #fff7f4;
+  --palette-sunrise-100: #ffede5;
+  --palette-sunrise-200: #ffd6c3;
+  --palette-sunrise-300: #ffb492;
+  --palette-sunrise-400: #fe9362;
+  --palette-sunrise-500: #fe5000;
+  --palette-sunrise-600: #cd4100;
+  --palette-sunrise-700: #9c3100;
+  --palette-sunrise-800: #6b2200;
+  --palette-sunrise-900: #3a1200;
+  --palette-sunrise-0: #ffffff;
+
+  --palette-tuna-50: #fffbfb;
+  --palette-tuna-100: #feecec;
+  --palette-tuna-200: #fddada;
+  --palette-tuna-300: #fab8b8;
+  --palette-tuna-400: #f89797;
+  --palette-tuna-500: #f35454;
+  --palette-tuna-600: #c54343;
+  --palette-tuna-700: #983333;
+  --palette-tuna-800: #6a2222;
+  --palette-tuna-900: #3d1212;
+  --palette-tuna-0: #ffffff;
+
+  /*
+      Palettes - semantic
+  */
+  --palette-utility-none: #ffffff00;
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/libs/cds-styles",
+  "lib": {
+    "styleIncludePaths": [
+      "src"
+    ]
+  },
+  "assets": [
+    "src/nani-light.scss"
+  ]
+}

@@ -1,0 +1,94 @@
+/**
+  Fonts
+  */
+
+@forward './hurmeGeometricSans1.scss';
+@forward './hurmeGeometricSans4.scss';
+
+:root {
+    --preferred-icon-size: 1.6rem;
+    --large-icon-size: 2.4rem;
+    // Common
+    --font-common-font-family: HurmeGeometricSans1, Helvetica, sans-serif;
+    --font-common-hero-font-family: HurmeGeometricSans4, Helvetica, sans-serif;
+    --font-common-bold-font-weight: 600;
+    --font-common-regular-font-weight: 400;
+    --font-level-normal-font-style: normal;
+    --font-html-font-size: 62.5%;
+    --font-wide-letter-spacing: 2.5px;
+    // Hero
+    --font-level-hero-font-family: var(--font-common-hero-font-family);
+    --font-level-hero-font-size: 3.2rem;
+    --font-level-hero-font-style: var(--font-level-normal-font-style);
+    --font-level-hero-font-weight: var(--font-common-bold-font-weight);
+    --font-level-hero-line-height: 1.25;
+    // Title
+    --font-level-title-font-family: var(--font-common-font-family);
+    --font-level-title-font-size: 2rem;
+    --font-level-title-font-style: var(--font-level-normal-font-style);
+    --font-level-title-font-weight: var(--font-common-bold-font-weight);
+    --font-level-title-line-height: 1.2;
+    // Subtitle
+    --font-level-subtitle-font-family: var(--font-common-font-family);
+    --font-level-subtitle-font-size: 1.6rem;
+    --font-level-subtitle-font-style: var(--font-level-normal-font-style);
+    --font-level-subtitle-font-weight: var(--font-common-bold-font-weight);
+    --font-level-subtitle-line-height: 1.5;
+    // p1 bold Paragraph
+    --font-level-p1-bold-font-family: var(--font-common-font-family);
+    --font-level-p1-bold-font-size: 1.4rem;
+    --font-level-p1-bold-font-style: var(--font-level-normal-font-style);
+    --font-level-p1-bold-font-weight: var(--font-common-bold-font-weight);
+    --font-level-p1-bold-line-height: 1.71;
+    // p1 reg Paragraph
+    --font-level-p1-reg-font-family: var(--font-common-font-family);
+    --font-level-p1-reg-font-size: 1.4rem;
+    --font-level-p1-reg-font-style: var(--font-level-normal-font-style);
+    --font-level-p1-reg-font-weight: var(--font-common-regular-font-weight);
+    --font-level-p1-reg-line-height: 1.71;
+    --font-level-p1-reg-letter-spacing: 0.28px;
+    // p2 bold Paragraph
+    --font-level-p2-bold-font-family: var(--font-common-font-family);
+    --font-level-p2-bold-font-size: 1.2rem;
+    --font-level-p2-bold-font-style: var(--font-level-normal-font-style);
+    --font-level-p2-bold-font-weight: var(--font-common-bold-font-weight);
+    --font-level-p2-bold-line-height: 1.33;
+    // p2 reg Paragraph
+    --font-level-p2-reg-font-family: var(--font-common-font-family);
+    --font-level-p2-reg-font-size: 1.2rem;
+    --font-level-p2-reg-font-style: var(--font-level-normal-font-style);
+    --font-level-p2-reg-font-weight: var(--font-common-regular-font-weight);
+    --font-level-p2-reg-line-height: 1.33;
+    --font-level-p2-reg-letter-spacing: 0.24px;
+    // p3 bold
+    --font-level-p3-bold-font-family: var(--font-common-font-family);
+    --font-level-p3-bold-font-size: 1rem;
+    --font-level-p3-bold-font-style: var(--font-level-normal-font-style);
+    --font-level-p3-bold-font-weight: var(--font-common-bold-font-weight);
+    --font-level-p3-bold-line-height: 1.6;
+    // p3 reg
+    --font-level-p3-reg-font-family: var(--font-common-font-family);
+    --font-level-p3-reg-font-size: 1rem;
+    --font-level-p3-reg-font-style: var(--font-level-normal-font-style);
+    --font-level-p3-reg-font-weight: var(--font-common-regular-font-weight);
+    --font-level-p3-reg-line-height: 1.6;
+    --font-level-p3-reg-letter-spacing: 0.2px;
+    // btn large
+    --font-level-btn-large-font-family: var(--font-common-font-family);
+    --font-level-btn-large-font-size: 1.6rem;
+    --font-level-btn-large-font-style: var(--font-level-normal-font-style);
+    --font-level-btn-large-font-weight: var(--font-common-bold-font-weight);
+    --font-level-btn-large-line-height: 1;
+    // btn medium
+    --font-level-btn-medium-font-family: var(--font-common-font-family);
+    --font-level-btn-medium-font-size: 1.4rem;
+    --font-level-btn-medium-font-style: var(--font-level-normal-font-style);
+    --font-level-btn-medium-font-weight: var(--font-common-bold-font-weight);
+    --font-level-btn-medium-line-height: 1.14;
+    // btn small
+    --font-level-btn-small-font-family: var(--font-common-font-family);
+    --font-level-btn-small-font-size: 1.2rem;
+    --font-level-btn-small-font-style: var(--font-level-normal-font-style);
+    --font-level-btn-small-font-weight: var(--font-common-bold-font-weight);
+    --font-level-btn-small-line-height: 1.33;
+}

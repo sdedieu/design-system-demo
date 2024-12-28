@@ -1,73 +1,74 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
+@use './fonts.scss';
 
-$hero: mat.define-typography-level($font-family: var(--font-level-hero-font-family),
+$hero: mat.m2-define-typography-level($font-family: var(--font-level-hero-font-family),
     $font-weight: var(--font-level-hero-font-weight),
     $font-size: var(--font-level-hero-font-size),
     $line-height: var(--font-level-hero-line-height),
   );
 
-$title: mat.define-typography-level($font-family: var(--font-level-title-font-family),
+$title: mat.m2-define-typography-level($font-family: var(--font-level-title-font-family),
     $font-weight: var(--font-level-title-font-weight),
     $font-size: var(--font-level-title-font-size),
     $line-height: var(--font-level-title-line-height),
   );
 
-$subtitle: mat.define-typography-level($font-family: var(--font-level-subtitle-font-family),
+$subtitle: mat.m2-define-typography-level($font-family: var(--font-level-subtitle-font-family),
     $font-weight: var(--font-level-subtitle-font-weight),
     $font-size: var(--font-level-subtitle-font-size),
     $line-height: var(--font-level-subtitle-line-height),
   );
 
-$p1-bold: mat.define-typography-level($font-family: var(--font-level-p1-bold-font-family),
+$p1-bold: mat.m2-define-typography-level($font-family: var(--font-level-p1-bold-font-family),
     $font-weight: var(--font-level-p1-bold-font-weight),
     $font-size: var(--font-level-p1-bold-font-size),
     $line-height: var(--font-level-p1-bold-line-height),
   );
 
-$p1-reg: mat.define-typography-level($font-family: var(--font-level-p1-reg-font-family),
+$p1-reg: mat.m2-define-typography-level($font-family: var(--font-level-p1-reg-font-family),
     $font-weight: var(--font-level-p1-reg-font-weight),
     $font-size: var(--font-level-p1-reg-font-size),
     $line-height: var(--font-level-p1-reg-line-height),
   );
 
-$p2-bold: mat.define-typography-level($font-family: var(--font-level-p2-bold-font-family),
+$p2-bold: mat.m2-define-typography-level($font-family: var(--font-level-p2-bold-font-family),
     $font-weight: var(--font-level-p2-bold-font-weight),
     $font-size: var(--font-level-p2-bold-font-size),
     $line-height: var(--font-level-p2-bold-line-height),
   );
 
-$p2-reg: mat.define-typography-level($font-family: var(--font-level-p2-reg-font-family),
+$p2-reg: mat.m2-define-typography-level($font-family: var(--font-level-p2-reg-font-family),
     $font-weight: var(--font-level-p2-reg-font-weight),
     $font-size: var(--font-level-p2-reg-font-size),
     $line-height: var(--font-level-p2-reg-line-height),
   );
 
-$p3-bold: mat.define-typography-level($font-family: var(--font-level-p3-bold-font-family),
+$p3-bold: mat.m2-define-typography-level($font-family: var(--font-level-p3-bold-font-family),
     $font-weight: var(--font-level-p3-bold-font-weight),
     $font-size: var(--font-level-p3-bold-font-size),
     $line-height: var(--font-level-p3-bold-line-height),
   );
 
-$p3-reg: mat.define-typography-level($font-family: var(--font-level-p3-reg-font-family),
+$p3-reg: mat.m2-define-typography-level($font-family: var(--font-level-p3-reg-font-family),
     $font-weight: var(--font-level-p3-reg-font-weight),
     $font-size: var(--font-level-p3-reg-font-size),
     $line-height: var(--font-level-p3-reg-line-height),
   );
 
-$button-large: mat.define-typography-level($font-family: var(--font-level-btn-large-font-family),
+$button-large: mat.m2-define-typography-level($font-family: var(--font-level-btn-large-font-family),
     $font-weight: var(--font-level-btn-large-font-weight),
     $font-size: var(--font-level-btn-large-font-size),
     $line-height: var(--font-level-btn-large-line-height),
   );
 
-$button-medium: mat.define-typography-level($font-family: var(--font-level-btn-medium-font-family),
+$button-medium: mat.m2-define-typography-level($font-family: var(--font-level-btn-medium-font-family),
     $font-weight: var(--font-level-btn-medium-font-weight),
     $font-size: var(--font-level-btn-medium-font-size),
     $line-height: var(--font-level-btn-medium-line-height),
   );
 
-$nani-typography-config: map.merge(mat.define-typography-config($headline-4: $hero,
+$nani-typography-config: map.merge(mat.m2-define-typography-config($headline-4: $hero,
       $headline-5: $title,
       $headline-6: $subtitle,
       $subtitle-1: $p1-reg,

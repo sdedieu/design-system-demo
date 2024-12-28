@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-hairline.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Hairline.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-hairlineoblique.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-HairlineOblique.otf');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-thin.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Thin.otf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-thinoblique.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-ThinOblique.otf');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-light.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Light.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Light.woff') format('woff'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-lightoblique.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-LightOblique.otf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-regular.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Regular.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Regular.woff') format('woff'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-regularoblique.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-RegularOblique.otf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-semibold.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-SemiBold.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-SemiBold.woff') format('woff'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-semiboldoblique.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-SemiBoldOblique.otf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-bold.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Bold.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Bold.woff') format('woff'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-boldoblique.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-BoldOblique.otf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-black.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Black.woff2') format('woff2'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Black.woff') format('woff'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1';
+  src: url('https://static.criteo.net/ui/design/fonts/hurmegeometricsans1-blackoblique.otf'),
+    url('./assets/HurmeGeometricSans1/HurmeGeometricSans1-BlackOblique.otf');
+  font-weight: 900;
+  font-style: italic;
+}

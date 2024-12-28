@@ -1,6 +1,8 @@
+@forward './index.scss';
+
 $material-palette-primary: (
   // 0 doesn't exist in palettes, using 50 instead
-    50: var(--primary-0),
+  50: var(--primary-0),
   100: var(--primary-1),
   200: var(--primary-2),
   300: var(--primary-3),
