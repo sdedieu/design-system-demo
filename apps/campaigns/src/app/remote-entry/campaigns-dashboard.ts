@@ -9,7 +9,7 @@ import { CdsButtonModule } from "@cds-library";
         <button mat-flat-button>Button</button>
         <button cds-size="small" mat-flat-button>Button</button>
     </div>
-    `
+    `,
 })
 export class CampaignsDashboard {
 }

@@ -26,10 +26,7 @@
             "input": "apps/campaigns/public"
           }
         ],
-        "styles": [
-          "apps/campaigns/src/styles.scss",
-          "dist/cds-styles/nani-light.css"
-        ],
+        "styles": [],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/campaigns/webpack.config.ts"
@@ -46,7 +43,7 @@
             {
               "type": "anyComponentStyle",
               "maximumWarning": "4kb",
-              "maximumError": "8kb"
+              "maximumError": "30kb"
             }
           ],
           "outputHashing": "all",

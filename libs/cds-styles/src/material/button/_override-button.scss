@@ -2,7 +2,8 @@
 @use '../../themes/light-theme' as theme;
 
 // Customize the entire app. Change :root to your selector if you want to scope the styles.
-:root {
+:root,
+:host {
   @include mat.button-overrides((filled-container-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
       filled-label-text-color: var(--neutral-white),
 
