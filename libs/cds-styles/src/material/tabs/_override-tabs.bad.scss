@@ -1,0 +1,136 @@
+@mixin main() {
+    .mat-mdc-tab-list {
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+
+    .mat-mdc-tab-header .mdc-tab {
+        padding: var(--spacing-none) var(--spacing-0-5);
+        height: var(--height-5) !important;
+        user-select: none;
+        flex-grow: 0 !important;
+
+        .mdc-tab-indicator {
+            .mdc-tab-indicator__content {
+                border-top-width: 1px;
+            }
+        }
+
+        .mdc-tab__content {
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-1);
+            margin-top: 3px;
+            padding: var(--spacing-1) var(--spacing-2);
+            height: auto;
+        }
+
+        &:focus-visible {
+            box-shadow: none;
+        }
+    }
+
+    .mat-mdc-tab-header .mdc-tab .mdc-tab__ripple::before,
+    .mat-mdc-tab-header .mdc-tab.mdc-tab--active .mdc-tab__ripple::before,
+    .mat-mdc-tab-header .mdc-tab .mat-ripple-element,
+    .mat-mdc-tab-header .mat-mdc-tab:hover.mdc-tab--active .mdc-tab__ripple::before {
+        display: none;
+    }
+
+    .mat-mdc-tab-disabled {
+        opacity: 1 !important;
+    }
+}
+
+@use '@angular/material' as mat;
+@use '../../core/fonts/levels-mixins.scss';
+
+@mixin color($color-config) {
+    .mat-mdc-tab-list {
+        &:after {
+            background-color: var(--color-border-neutral-very-weak-default);
+        }
+    }
+
+    .mat-mdc-tab-header .mdc-tab.mat-mdc-tab-disabled {
+        .mdc-tab__text-label {
+            color: var(--color-text-disabled);
+        }
+    }
+
+    .mat-mdc-tab-header .mdc-tab {
+        .mdc-tab__text-label {
+            color: var(--color-text-secondary-very-weak-default);
+        }
+
+        .mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
+            opacity: 1;
+            border-top-color: var(--color-border-neutral-very-weak-default) !important;
+        }
+
+        &:not(.mat-mdc-tab-disabled) {
+            &:focus-visible {
+                .mdc-tab__content {
+                    box-shadow: var(--ring-primary);
+                }
+            }
+
+            &:not(.mdc-tab-indicator--active) {
+                .mdc-tab__content:hover {
+                    background-color: var(--color-background-secondary-very-weak-hover) !important;
+
+                    .mdc-tab__text-label {
+                        color: var(--color-text-secondary-very-weak-hover);
+                    }
+                }
+
+                .mdc-tab__content:active {
+                    background-color: var(--color-background-secondary-very-weak-pressed) !important;
+
+                    .mdc-tab__text-label {
+                        color: var(--color-text-secondary-very-weak-pressed);
+                    }
+                }
+            }
+        }
+    }
+
+    .mat-mdc-tab-header .mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab-indicator--active {
+        .mdc-tab__text-label {
+            color: var(--color-text-secondary-very-weak-selected);
+        }
+
+        .mdc-tab__content {
+            background-color: var(--color-background-secondary-very-weak-activated) !important;
+        }
+
+        .mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
+            border-top-color: var(--color-background-neutral-very-strong-default) !important;
+        }
+    }
+}
+
+@mixin typography($typography-config) {
+    .mat-mdc-tab-header .mdc-tab {
+        @include levels-mixins.p2-bold();
+    }
+}
+
+@mixin theme($theme) {
+    $color-config: mat.get-color-config($theme);
+
+    @if $color-config !=null {
+        @include color($color-config);
+    }
+
+    $typography-config: mat.get-typography-config($theme);
+
+    @if $typography-config !=null {
+        @include typography($typography-config);
+    }
+}

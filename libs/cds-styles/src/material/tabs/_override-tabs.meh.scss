@@ -1,0 +1,51 @@
+@mixin main() {
+    :root {
+        --mdc-tab-height: var(--height-5);
+        --mdc-tab-padding-horizontal: var(--spacing-0-5);
+        --mdc-tab-border-radius: var(--radius-md);
+        --mdc-tab-text-color: var(--color-text-secondary-very-weak-default);
+        --mdc-tab-text-color-disabled: var(--color-text-disabled);
+        --mdc-tab-indicator-color: var(--color-border-neutral-very-weak-default);
+        --mdc-tab-indicator-color-active: var(--color-background-neutral-very-strong-default);
+        --mdc-tab-background-color-hover: var(--color-background-secondary-very-weak-hover);
+        --mdc-tab-text-color-hover: var(--color-text-secondary-very-weak-hover);
+        --mdc-tab-background-color-pressed: var(--color-background-secondary-very-weak-pressed);
+        --mdc-tab-text-color-pressed: var(--color-text-secondary-very-weak-pressed);
+        --mdc-tab-background-color-active: var(--color-background-secondary-very-weak-activated);
+        --mdc-tab-text-color-selected: var(--color-text-secondary-very-weak-selected);
+    }
+
+    .mat-mdc-tab-list {
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            z-index: -1;
+            background-color: var(--color-border-neutral-very-weak-default);
+        }
+    }
+}
+
+@mixin typography($typography-config) {
+    :root {
+        --mdc-typography-tab-label-font-family: #{levels-mixins.p2-bold().font-family};
+        --mdc-typography-tab-label-font-size: #{levels-mixins.p2-bold().font-size};
+        --mdc-typography-tab-label-font-weight: #{levels-mixins.p2-bold().font-weight};
+    }
+}
+
+@mixin theme($theme) {
+    $color-config: mat.get-color-config($theme);
+
+    @if $color-config !=null {
+        @include main();
+    }
+
+    $typography-config: mat.get-typography-config($theme);
+
+    @if $typography-config !=null {
+        @include typography($typography-config);
+    }
+}

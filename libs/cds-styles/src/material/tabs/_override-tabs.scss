@@ -3,21 +3,28 @@
 
 :root,
 :host {
-    @include mat.tabs-overrides((active-indicator-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-            active-focus-indicator-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-            active-hover-indicator-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-
-            active-indicator-height: var(--height-0-5),
-
-            divider-color: var(--neutral-1),
-
-            inactive-label-text-color: var(--neutral-9),
-            active-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-            active-hover-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-            active-focus-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-
-            inactive-hover-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-            inactive-focus-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-
-            label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg)));
+  @include mat.tabs-overrides(
+    (
+      active-indicator-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      active-focus-indicator-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      active-hover-indicator-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      active-indicator-height: var(--height-0-5),
+      divider-color: var(--neutral-1),
+      inactive-label-text-color: var(--neutral-9),
+      active-label-text-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      active-hover-label-text-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      active-focus-label-text-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      inactive-hover-label-text-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      inactive-focus-label-text-color:
+        mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg),
+    )
+  );
 }
