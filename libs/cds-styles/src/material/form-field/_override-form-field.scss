@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.form-field-overrides(
+    (
+      outlined-container-shape: theme.$default-container-radius,
+      outlined-caret-color: theme.$default-border-color,
+      outlined-focus-outline-color: theme.$default-border-color,
+      outlined-focus-label-text-color: theme.$default-text-color,
+      outlined-label-text-color: theme.$default-text-color,
+      outlined-hover-label-text-color: theme.$default-text-color,
+      /*
+        outlined-disabled-label-text-color:
+        outlined-input-text-color: outlined-disabled-input-text-color: outlined-input-text-placeholder-color: outlined-error-caret-color:
+        outlined-error-focus-label-text-color: outlined-error-label-text-color: outlined-error-hover-label-text-color: outlined-outline-color:
+        outlined-disabled-outline-color: outlined-hover-outline-color: outlined-error-focus-outline-color: outlined-error-hover-outline-color:
+        outlined-error-outline-color: outlined-label-text-font: outlined-label-text-size: outlined-label-text-tracking: outlined-label-text-weight:
+        focus-select-arrow-color: disabled-input-text-placeholder-: state-layer-color: error-text-color: select-option-text-color:
+        select-disabled-option-text-color: leading-icon-color: disabled-leading-icon-color: trailing-icon-color: disabled-trailing-icon-color:
+        error-focus-trailing-icon-color: error-hover-trailing-icon-color: error-trailing-icon-color: enabled-select-arrow-color: disabled-select-arrow-color:
+        hover-state-layer-opacity: focus-state-layer-opacity: container-text-font: container-text-line-height: container-text-size: container-text-tracking:
+        container-text-weight: outlined-label-text-populated-size: subscript-text-font: subscript-text-line-height: subscript-text-size: subscript-text-tracking:
+        subscript-text-weight: container-height: filled-label-display: container-vertical-padding: filled-with-label-container-padding-top:
+        filled-with-label-container-padding-bottom: ,*/
+    )
+  );
+}

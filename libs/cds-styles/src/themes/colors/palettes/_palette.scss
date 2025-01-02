@@ -12,7 +12,7 @@ $material-palette-primary: (
   700: var(--primary-7),
   800: var(--primary-8),
   900: var(--primary-9),
-  contrast: (),
+  contrast: ()
 );
 
 $material-palette-accent: (
@@ -40,5 +40,20 @@ $material-palette-warn: (
   700: var(--warn-7),
   800: var(--warn-8),
   900: var(--warn-9),
+  contrast: (),
+);
+
+$material-palette-neutral: (
+  background: red,
+  50: var(--neutral-0),
+  100: var(--neutral-1),
+  200: var(--neutral-2),
+  300: var(--neutral-3),
+  400: var(--neutral-4),
+  500: var(--neutral-5),
+  600: var(--neutral-6),
+  700: var(--neutral-7),
+  800: var(--neutral-8),
+  900: var(--neutral-9),
   contrast: (),
 );

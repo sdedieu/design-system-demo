@@ -1,4 +1,9 @@
 @forward './material/button/override-button';
+@forward './material/chips/override-chips';
+@forward './material/form-field/override-form-field';
+@forward './material/paginator/override-paginator';
+@forward './material/select/override-select';
+@forward './material/table/override-table';
 @forward './material/tabs/override-tabs';
 
 @tailwind base;

@@ -3,16 +3,22 @@
 
 :root,
 :host {
-  @include mat.button-overrides((filled-container-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-      filled-label-text-color: var(--neutral-white),
-
+  @include mat.button-overrides(
+    (
+      filled-container-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      filled-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, text),
       filled-label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg),
-
-      filled-container-shape: var(--radius-sm),
+      filled-container-shape: theme.$default-container-radius,
       filled-horizontal-padding: var(--spacing-2),
-      filled-container-height: var(--height-5)));
+      filled-container-height: var(--height-5),
+    )
+  );
 
   [cds-size='small'] {
-    @include mat.button-overrides((filled-container-height: var(--height-4)))
+    @include mat.button-overrides(
+      (
+        filled-container-height: var(--height-4),
+      )
+    );
   }
 }

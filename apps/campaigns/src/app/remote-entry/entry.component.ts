@@ -7,6 +7,6 @@ import { CampaignsDashboard } from './campaigns-dashboard';
   selector: 'ds-cmp-campaigns-entry',
   template: `<ds-cmp-campaigns-dashboard />`,
   styleUrls: ['./entry.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
-export class RemoteEntryComponent { }
+export class RemoteEntryComponent {}
