@@ -1,0 +1,34 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.list-overrides(
+    (
+      list-item-label-text-color: mat.get-theme-color(theme.$nani-light-theme, foreground, text),
+      list-item-leading-icon-color: theme.$default-foreground-lighter-color,
+      list-item-hover-leading-icon-color: mat.get-theme-color(theme.$nani-light-theme, accent, lighter),
+      list-item-label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg),
+      list-item-label-text-line-height: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, line-height),
+      list-item-label-text-size: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, font-size),
+    )
+  );
+
+  .mat-mdc-list-item.mdc-list-item--activated {
+    @include mat.list-overrides(
+      (
+        list-item-leading-icon-color: mat.get-theme-color(theme.$nani-light-theme, accent, default),
+      )
+    );
+  }
+
+  .mat-mdc-subheader {
+    font: mat.get-theme-typography(theme.$nani-light-theme, p1-bold);
+
+    &.active {
+      .mat-icon {
+        color: mat.get-theme-color(theme.$nani-light-theme, accent, default);
+      }
+    }
+  }
+}

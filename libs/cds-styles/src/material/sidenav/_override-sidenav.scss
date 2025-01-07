@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.sidenav-overrides(
+    (
+      container-background-color: theme.$default-background-color,
+    )
+  );
+}

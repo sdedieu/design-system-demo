@@ -11,6 +11,28 @@
       filled-container-shape: theme.$default-container-radius,
       filled-horizontal-padding: var(--spacing-2),
       filled-container-height: var(--height-5),
+      filled-disabled-container-color: mat.get-theme-color(theme.$nani-light-theme, background, disabled-button),
+      filled-disabled-label-text-color: mat.get-theme-color(theme.$nani-light-theme, foreground, disabled-button),
+      filled-icon-spacing: var(--spacing-2),
+      filled-icon-offset: var(--spacing-2),
+      filled-ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
+    )
+  );
+
+  @include mat.fab-overrides(
+    (
+      container-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      foreground-color: mat.get-theme-color(theme.$nani-light-theme, primary, text),
+      extended-label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg),
+      extended-container-shape: theme.$default-container-radius,
+      extended-container-height: var(--height-5),
+      extended-container-elevation-shadow: none,
+      extended-focus-container-elevation-shadow: none,
+      extended-hover-container-elevation-shadow: none,
+      extended-pressed-container-elevation-shadow: none,
+      ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, darker),
+      disabled-state-container-color: mat.get-theme-color(theme.$nani-light-theme, background, disabled-button),
+      disabled-state-foreground-color: mat.get-theme-color(theme.$nani-light-theme, foreground, disabled-button),
     )
   );
 
@@ -18,6 +40,13 @@
     @include mat.button-overrides(
       (
         filled-container-height: var(--height-4),
+      )
+    );
+
+    @include mat.icon-button-overrides(
+      (
+        icon-size: var(--height-2),
+        state-layer-size: var(--height-4),
       )
     );
   }

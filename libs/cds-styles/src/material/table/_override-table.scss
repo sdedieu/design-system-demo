@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.table-overrides(
+    (
+      header-headline-font: mat.get-theme-typography(theme.$nani-light-theme, p1-bold),
+      header-headline-weight: mat.get-theme-typography(theme.$nani-light-theme, p1-bold, font-weight),
+      header-headline-line-height: mat.get-theme-typography(theme.$nani-light-theme, p1-bold, line-height),
+      header-headline-size: mat.get-theme-typography(theme.$nani-light-theme, p1-bold, font-size),
+      row-item-label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg),
+      row-item-label-text-line-height: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, line-height),
+      row-item-label-text-size: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, font-size),
+      row-item-label-text-weight: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, font-weight),
+    )
+  );
+}

@@ -1,9 +1,9 @@
-import { NgModule } from "@angular/core";
-import { MatButtonModule } from "@angular/material/button";
-import { CdsButtonDirective } from "./button.directive";
+import { NgModule } from '@angular/core';
+import { CdsButtonDirective } from './button.directive';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-    imports: [CdsButtonDirective],
-    exports: [MatButtonModule, CdsButtonDirective]
+  imports: [CdsButtonDirective],
+  exports: [CdsButtonDirective, MatButtonModule],
 })
-export class CdsButtonModule { }
+export class CdsButtonModule {}

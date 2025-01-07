@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.card-overrides(
+    (
+      outlined-container-shape: theme.$default-container-radius,
+      outlined-outline-color: theme.$default-foreground-lighter-color,
+    )
+  );
+}

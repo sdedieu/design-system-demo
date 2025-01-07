@@ -1,19 +1,14 @@
 import { TitleCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { MatTabsModule } from '@angular/material/tabs';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { CdsButtonModule } from '@cds-library';
+import { CdsButtonModule, CdsTabsModule, CdsIconModule } from '@cds-library';
 import { filter, map } from 'rxjs';
 
 @Component({
-  imports: [CdsButtonModule, MatTabsModule, RouterLink, RouterOutlet, TitleCasePipe],
+  imports: [CdsButtonModule, CdsTabsModule, CdsIconModule, RouterLink, RouterOutlet, TitleCasePipe],
   selector: 'ds-cmp-campaigns-dashboard',
   template: `<h1>Campaigns</h1>
-    <div class="cds-flex cds-gap-1">
-      <button mat-flat-button>Button</button>
-      <button cds-size="small" mat-flat-button>Button</button>
-    </div>
     <nav mat-tab-nav-bar [tabPanel]="tabPanel">
       @for (link of links; track link) {
       <a mat-tab-link [routerLink]="[link]" [active]="lastUrlSegment() === link"> {{ link | titlecase }} </a>

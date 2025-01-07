@@ -39,4 +39,11 @@ $nani-light-theme: map.merge(
 $default-text-color: mat.get-theme-color($nani-light-theme, foreground, text);
 $default-border-color: mat.get-theme-color($nani-light-theme, foreground, text);
 $default-background-color: var(--neutral-white);
+$default-foreground-color: var(--neutral-5);
+$default-foreground-lighter-color: var(--neutral-3);
 $default-container-radius: var(--radius-sm);
+
+:root,
+:host {
+  font-size: mat.get-theme-typography($nani-light-theme, p1-reg);
+}
