@@ -45,6 +45,9 @@ import { filter, map } from 'rxjs';
         </cds-header>
         <cds-page>
           <h1>Shell</h1>
+          <button mat-fab aria-label="Need help ? Chat with us" class="cds-fixed cds-right-8 cds-bottom-6 cds-z-10">
+            <mat-icon>chat</mat-icon>
+          </button>
           <router-outlet />
         </cds-page>
       </mat-sidenav-content>
@@ -83,7 +86,7 @@ export class AppComponent {
       display: true,
       pages: [
         { order: 1, icon: null, name: 'campaigns', route: 'campaigns', isActive: false },
-        { order: 2, icon: null, name: 'analytics', route: 'settings', isActive: false },
+        { order: 2, icon: null, name: 'analytics', route: 'analytics', isActive: false },
       ],
     },
   ];

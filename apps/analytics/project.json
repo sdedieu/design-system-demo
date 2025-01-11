@@ -1,31 +1,31 @@
 {
-  "name": "campaigns",
+  "name": "analytics",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "ds-camp",
-  "sourceRoot": "apps/campaigns/src",
+  "prefix": "ds-ana",
+  "sourceRoot": "apps/analytics/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/campaigns",
-        "index": "apps/campaigns/src/index.html",
-        "main": "apps/campaigns/src/main.ts",
+        "outputPath": "dist/apps/analytics",
+        "index": "apps/analytics/src/index.html",
+        "main": "apps/analytics/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/campaigns/tsconfig.app.json",
+        "tsConfig": "apps/analytics/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/campaigns/public"
+            "input": "apps/analytics/public"
           }
         ],
-        "styles": ["apps/campaigns/src/app/remote-entry/entry.component.scss"],
+        "styles": [],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/campaigns/webpack.config.ts"
+          "path": "apps/analytics/webpack.config.ts"
         }
       },
       "configurations": {
@@ -39,12 +39,12 @@
             {
               "type": "anyComponentStyle",
               "maximumWarning": "4kb",
-              "maximumError": "30kb"
+              "maximumError": "8kb"
             }
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/campaigns/webpack.prod.config.ts"
+            "path": "apps/analytics/webpack.prod.config.ts"
           }
         },
         "development": {
@@ -61,15 +61,15 @@
     "serve": {
       "executor": "@nx/angular:dev-server",
       "options": {
-        "port": 4201,
-        "publicHost": "http://localhost:4201"
+        "port": 4203,
+        "publicHost": "http://localhost:4203"
       },
       "configurations": {
         "production": {
-          "buildTarget": "campaigns:build:production"
+          "buildTarget": "analytics:build:production"
         },
         "development": {
-          "buildTarget": "campaigns:build:development"
+          "buildTarget": "analytics:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "campaigns:build"
+        "buildTarget": "analytics:build"
       }
     },
     "lint": {
@@ -87,23 +87,23 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/campaigns/jest.config.ts"
+        "jestConfig": "apps/analytics/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "defaultConfiguration": "production",
       "options": {
-        "buildTarget": "campaigns:build",
-        "port": 4201,
+        "buildTarget": "analytics:build",
+        "port": 4203,
         "watch": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "campaigns:build:development"
+          "buildTarget": "analytics:build:development"
         },
         "production": {
-          "buildTarget": "campaigns:build:production"
+          "buildTarget": "analytics:build:production"
         }
       }
     }

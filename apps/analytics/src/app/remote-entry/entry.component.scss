@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../../../../../dist/cds-styles/nani-light.css';
+
+.echart {
+  text {
+    fill: var(--neutral-8);
+  }
+}
+
+.mat-mdc-card-outlined {
+  border-radius: var(--radius-lg) !important;
+}

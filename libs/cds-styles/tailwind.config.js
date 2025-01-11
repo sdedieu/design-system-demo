@@ -11,13 +11,18 @@ module.exports = {
     'flexGrow',
     'flexShrink',
     'flexWrap',
+    'gridTemplateColumns',
     'alignItems',
     'justifyContent',
+    'position',
+    'inset',
+    'zIndex',
   ],
   theme: {
     extend: {},
   },
   plugins: [],
   prefix: 'cds-',
+  important: true,
 };
 
