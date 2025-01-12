@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
-@forward './fonts.scss';
+@use './fonts.scss';
 
 $hero: mat.m2-define-typography-level(
   $font-family: var(--font-level-hero-font-family),

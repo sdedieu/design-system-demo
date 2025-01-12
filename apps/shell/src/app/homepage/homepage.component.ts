@@ -8,9 +8,9 @@ import { CdsCardModule } from '@cds-library';
   template: `
     <div class="cds-grid cds-grid-cols-2 cds-gap-4">
       @for (card of cards; track card.name) {
-      <a [routerLink]="card.route">
+      <a [routerLink]="card.route" class="cds-place-self-center">
         <mat-card appearance="outlined">
-          <img mat-card-image [src]="card.img" alt="Photo of a Shiba Inu" />
+          <img mat-card-image height="400" width="400" [src]="card.img" alt="Photo of a Shiba Inu" />
         </mat-card>
       </a>
       }
@@ -19,7 +19,7 @@ import { CdsCardModule } from '@cds-library';
 })
 export class HomePageComponent {
   cards = [
-    { img: 'campaign.png', name: 'campaign', route: 'campaign' },
-    { img: 'analytics.png', name: 'analytics', route: 'analytics' },
+    { img: 'campaigns.svg', name: 'campaigns', route: '/campaigns', alt: 'ad campaigns illustration image' },
+    { img: 'analytics.svg', name: 'analytics', route: '/analytics', alt: 'analytics illustration image' },
   ];
 }

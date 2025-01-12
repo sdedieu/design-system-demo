@@ -16,7 +16,7 @@
       active-focus-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
       inactive-hover-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
       inactive-focus-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-      label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg),
+      label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, font-family),
     )
   );
 }

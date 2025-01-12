@@ -15,6 +15,7 @@ module.exports = {
     'alignItems',
     'justifyContent',
     'position',
+    'placeSelf',
     'inset',
     'zIndex',
   ],

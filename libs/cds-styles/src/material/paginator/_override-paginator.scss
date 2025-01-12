@@ -7,7 +7,7 @@
     (
       container-text-color: theme.$default-text-color,
       enabled-icon-color: theme.$default-text-color,
-      container-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg),
+      container-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, font-family),
       form-field-container-vertical-padding: var(--spacing-1),
     )
   );

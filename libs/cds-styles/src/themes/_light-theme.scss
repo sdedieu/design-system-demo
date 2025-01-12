@@ -45,5 +45,6 @@ $default-container-radius: var(--radius-sm);
 
 :root,
 :host {
-  font-size: mat.get-theme-typography($nani-light-theme, p1-reg);
+  font-family: mat.get-theme-typography($nani-light-theme, p1-reg, font-family);
+  font-size: mat.get-theme-typography($nani-light-theme, p1-reg, font-size);
 }
