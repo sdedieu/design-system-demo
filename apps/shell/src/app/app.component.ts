@@ -27,7 +27,9 @@ import { filter, map } from 'rxjs';
             <mat-icon matListItemIcon>{{ page.icon ?? 'arrow_right' }}</mat-icon>
             <div matListItemTitle>{{ page.name | titlecase }}</div>
           </a>
-          } }
+          }
+          <mat-divider class="cds-m-8" />
+          }
         </mat-nav-list>
       </mat-sidenav>
 

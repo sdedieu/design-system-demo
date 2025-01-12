@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.divider-overrides(
+    (
+      width: 1px,
+      color: theme.$default-foreground-lighter-color,
+    )
+  );
+}

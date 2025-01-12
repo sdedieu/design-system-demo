@@ -24,6 +24,7 @@
   @include mat.fab-overrides(
     (
       container-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      container-shape: theme.$default-container-radius,
       foreground-color: mat.get-theme-color(theme.$nani-light-theme, primary, text),
       extended-label-text-font: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-family),
       extended-label-text-size: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-size),

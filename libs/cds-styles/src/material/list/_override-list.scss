@@ -5,6 +5,7 @@
 :host {
   @include mat.list-overrides(
     (
+      list-item-leading-icon-start-space: var(--spacing-4),
       list-item-label-text-color: mat.get-theme-color(theme.$nani-light-theme, foreground, text),
       list-item-leading-icon-color: theme.$default-foreground-lighter-color,
       list-item-hover-leading-icon-color: mat.get-theme-color(theme.$nani-light-theme, accent, lighter),
@@ -24,6 +25,9 @@
 
   .mat-mdc-subheader {
     font: mat.get-theme-typography(theme.$nani-light-theme, p1-bold);
+    .mat-icon {
+      margin-left: var(--spacing-2);
+    }
 
     &.active {
       .mat-icon {
