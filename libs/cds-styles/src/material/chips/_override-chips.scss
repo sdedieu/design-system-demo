@@ -1,0 +1,20 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.chips-overrides(
+    (
+      elevated-container-color: var(--announcement-3),
+      elevated-selected-container-color: var(--announcement-7),
+      outline-width: 0,
+      label-text-color: var(--announcement-7),
+      selected-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, text),
+      container-height: var(--height-3),
+      label-text-font: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', font-family),
+      label-text-line-height: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', line-height),
+      label-text-size: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', font-size),
+      label-text-weight: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', font-weight),
+    )
+  );
+}

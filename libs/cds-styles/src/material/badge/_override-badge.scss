@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+@use '../../themes/light-theme' as theme;
+
+:root,
+:host {
+  @include mat.badge-overrides(
+    (
+      background-color: mat.get-theme-color(theme.$nani-light-theme, accent, default),
+      text-color: theme.$default-text-color,
+      container-shape: var(--radius-full),
+      small-size-container-size: var(--width-1-5),
+      text-font: mat.get-theme-typography(theme.$nani-light-theme, 'p2-reg', font-family),
+      text-size: mat.get-theme-typography(theme.$nani-light-theme, 'p2-reg', font-size),
+      text-weight: mat.get-theme-typography(theme.$nani-light-theme, 'p2-reg', font-weight),
+    )
+  );
+}

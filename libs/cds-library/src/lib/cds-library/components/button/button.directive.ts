@@ -20,7 +20,6 @@ export const CDS_BUTTON_HOST = {
 @Directive({
   selector: `button[mat-button], button[mat-raised-button], button[mat-flat-button],
     button[mat-stroked-button], button[mat-icon-button], a[mat-button], a[mat-raised-button], a[mat-flat-button], a[mat-stroked-button], a[mat-icon-button]`,
-  standalone: true,
   host: CDS_BUTTON_HOST,
 })
 export class CdsButtonDirective implements AfterContentInit {

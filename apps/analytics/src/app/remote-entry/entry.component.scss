@@ -8,5 +8,5 @@
 }
 
 .mat-mdc-card-outlined {
-  border-radius: var(--radius-lg) !important;
+  --mdc-outlined-card-container-shape: var(--radius-lg);
 }

@@ -17,7 +17,11 @@
       filled-disabled-label-text-color: mat.get-theme-color(theme.$nani-light-theme, foreground, disabled-button),
       filled-icon-spacing: var(--spacing-2),
       filled-icon-offset: var(--spacing-2),
-      filled-ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      filled-ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, darker),
+      filled-hover-state-layer-opacity: 0.1,
+      filled-focus-state-layer-opacity: 0.1,
+      filled-pressed-state-layer-opacity: 0.4,
+      filled-state-layer-color: theme.$default-background-color,
     )
   );
 
@@ -38,6 +42,10 @@
       ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, darker),
       disabled-state-container-color: mat.get-theme-color(theme.$nani-light-theme, background, disabled-button),
       disabled-state-foreground-color: mat.get-theme-color(theme.$nani-light-theme, foreground, disabled-button),
+      state-layer-color: theme.$default-background-color,
+      hover-state-layer-opacity: 0.1,
+      focus-state-layer-opacity: 0.1,
+      pressed-state-layer-opacity: 0.4,
     )
   );
 

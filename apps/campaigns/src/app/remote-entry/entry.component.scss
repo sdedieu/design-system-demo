@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-/*@import "../../../../../dist/cds-styles/nani-light.css";*/
+/*@import '../../../../../dist/cds-styles/nani-light.css';*/
 
 @use '../../../../../dist/cds-styles/themes/colors/palettes/index.css';
 @use '../../../../../dist/cds-styles/themes/variables.css';
@@ -204,7 +204,6 @@
   --mat-sys-pressed-state-layer-opacity: 0.12;
 }
 
-/* Button */
 :host {
   --mdc-extended-fab-container-height: 56px;
   --mdc-extended-fab-container-shape: var(--mat-sys-corner-extra-large);
@@ -215,9 +214,9 @@
   --mdc-extended-fab-label-text-font: var(--mat-sys-label-large-font);
   --mdc-extended-fab-label-text-size: var(--mat-sys-label-large-size);
   --mdc-extended-fab-label-text-weight: var(--mat-sys-label-large-weight);
+  --mdc-extended-fab-container-elevation-shadow: var(--mat-sys-level3);
 }
 
-/* Table */
 :host {
   --mat-table-header-headline-font: var(--mat-sys-title-small-font, Roboto, sans-serif);
   --mat-table-header-headline-line-height: var(--mat-sys-title-small-line-height);
@@ -228,6 +227,25 @@
   --mat-table-row-item-label-text-line-height: var(--mat-sys-body-medium-line-height);
   --mat-table-row-item-label-text-size: var(--mat-sys-body-medium-size, 14px);
   --mat-table-row-item-label-text-weight: var(--mat-sys-body-medium-weight);
+}
+
+:host {
+  --mdc-tab-indicator-active-indicator-color: var(--mat-sys-primary);
+  --mat-tab-header-active-focus-indicator-color: var(--mat-sys-primary);
+  --mat-tab-header-active-hover-indicator-color: var(--mat-sys-primary);
+  --mat-tab-header-active-label-text-color: var(--mat-sys-on-surface);
+
+  --mat-tab-header-active-label-text-color: var(--mat-sys-on-surface);
+  --mat-tab-header-active-hover-label-text-color: var(--mat-sys-on-surface);
+  --mat-tab-header-active-focus-label-text-color: var(--mat-sys-on-surface);
+  --mat-tab-header-inactive-hover-label-text-color: var(--mat-sys-on-surface);
+  --mat-tab-header-inactive-focus-label-text-color: var(--mat-sys-on-surface);
+
+  --mat-tab-header-label-text-font: var(--mat-sys-title-small-font);
+  --mat-tab-header-label-text-size: var(--mat-sys-title-small-size);
+  --mat-tab-header-label-text-tracking: var(--mat-sys-title-small-tracking);
+  --mat-tab-header-label-text-line-height: var(--mat-sys-title-small-line-height);
+  --mat-tab-header-label-text-weight: var(--mat-sys-title-small-weight);
 }
 
 h1 {

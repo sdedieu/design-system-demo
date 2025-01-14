@@ -3,11 +3,11 @@ import { Component, effect, inject, ViewChild, ViewEncapsulation } from '@angula
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatSidenav } from '@angular/material/sidenav';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
-import { CdsPageComponent, CdsHeaderComponent, CdsSidenavModule, CdsListModule, CdsButtonModule, CdsIconModule } from '@cds-library';
+import { CdsPageComponent, CdsBadgeModule, CdsHeaderComponent, CdsSidenavModule, CdsListModule, CdsButtonModule, CdsIconModule } from '@cds-library';
 import { filter, map } from 'rxjs';
 
 @Component({
-  imports: [RouterModule, CdsSidenavModule, CdsListModule, CdsButtonModule, CdsIconModule, CdsHeaderComponent, CdsPageComponent, CommonModule],
+  imports: [RouterModule, CdsSidenavModule, CdsListModule, CdsButtonModule, CdsBadgeModule, CdsIconModule, CdsHeaderComponent, CdsPageComponent, CommonModule],
   selector: 'ds-shl-root',
   template: `
     <mat-sidenav-container (backdropClick)="close()">
@@ -46,7 +46,13 @@ import { filter, map } from 'rxjs';
           </div>
         </cds-header>
         <cds-page>
-          <h1>Shell</h1>
+          <div class="cds-flex cds-justify-between cds-items-center">
+            <h1>Shell</h1>
+            <p class="cds-flex cds-items-center">
+              27 notifications
+              <mat-icon matBadge="1" matBadgeSize="small">notifications_active</mat-icon>
+            </p>
+          </div>
           <button mat-fab aria-label="Need help ? Chat with us" class="cds-fixed cds-right-8 cds-bottom-6 cds-z-10">
             <mat-icon>chat</mat-icon>
           </button>

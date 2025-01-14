@@ -8,7 +8,7 @@
       active-indicator-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
       active-focus-indicator-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
       active-hover-indicator-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-      active-indicator-height: var(--height-0-5),
+      active-indicator-height: 2px,
       divider-color: var(--neutral-1),
       inactive-label-text-color: theme.$default-text-color,
       active-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
@@ -16,7 +16,10 @@
       active-focus-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
       inactive-hover-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
       inactive-focus-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-      label-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, font-family),
+      label-text-font: mat.get-theme-typography(theme.$nani-light-theme, 'p1-bold', font-family),
+      label-text-line-height: mat.get-theme-typography(theme.$nani-light-theme, 'p1-bold', line-height),
+      label-text-size: mat.get-theme-typography(theme.$nani-light-theme, 'p1-bold', font-size),
+      label-text-weight: mat.get-theme-typography(theme.$nani-light-theme, 'p1-bold', font-weight),
     )
   );
 }
