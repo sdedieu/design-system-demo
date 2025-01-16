@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   corePlugins: [
     'display',
@@ -22,7 +24,16 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addComponents }) {
+      addComponents({
+        '.divider': {
+          '--mat-divider-width': '1px',
+          '--mat-divider-color': 'red'
+        }
+      });
+    })
+  ],
   prefix: 'cds-',
   important: true,
 };

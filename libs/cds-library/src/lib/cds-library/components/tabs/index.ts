@@ -1,2 +1,1 @@
-export { CdsTabsModule } from './tabs.module';
-export { CdsTabsDirective } from './tabs.directive';
+export * from './public-api';

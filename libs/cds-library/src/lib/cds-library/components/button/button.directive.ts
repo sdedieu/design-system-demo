@@ -1,5 +1,5 @@
 import { AfterContentInit, Directive, Inject, InjectionToken, Input, Optional } from '@angular/core';
-import { CdsSemanticVariations, CdsSize, CdsType } from '../../theming/theming.model';
+import { CdsSemanticVariations, CdsSize, CdsType } from './theming.model';
 
 export type CdsButtonColor = Extract<CdsSemanticVariations, 'accent' | 'primary' | 'secondary' | 'destructive'>;
 
@@ -14,7 +14,7 @@ export const CDS_BUTTON_DEFAULT_OPTIONS = new InjectionToken<CdsButtonDefaultOpt
 export const CDS_BUTTON_HOST = {
   '[attr.cds-size]': '_size || null',
   '[attr.cds-type]': '_type || null',
-  '[class]': '_color ? "mat-" + _color : ""',
+  '[class]': '_color ? "cds-button mat-" + _color : "cds-button"',
 };
 
 @Directive({
@@ -46,7 +46,9 @@ export class CdsButtonDirective implements AfterContentInit {
     @Optional()
     @Inject(CDS_BUTTON_DEFAULT_OPTIONS)
     private _defaultOptions?: CdsButtonDefaultOptions
-  ) {}
+  ) {
+    console.log(this._defaultOptions);
+  }
 
   ngAfterContentInit(): void {
     this._size = this._defaultOptions?.size || this._size;

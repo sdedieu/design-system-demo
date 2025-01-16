@@ -2,7 +2,10 @@ import { TitleCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { CdsButtonModule, CdsTabsModule, CdsIconModule, CdsChipsModule } from '@cds-library';
+import { CdsButtonModule } from '@cds-library/button';
+import { CdsTabsModule } from '@cds-library/tabs';
+import { CdsIconModule } from '@cds-library/icon';
+import { CdsChipsModule } from '@cds-library/chips';
 import { filter, map } from 'rxjs';
 
 @Component({

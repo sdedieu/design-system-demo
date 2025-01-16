@@ -1,1 +1,1 @@
-export { CdsSelectModule } from './select.module';
+export * from './public-api';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CdsCardModule } from '@cds-library';
+import { CdsCardModule } from '@cds-library/card';
 
 @Component({
   imports: [CdsCardModule, RouterLink],

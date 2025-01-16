@@ -1,1 +1,1 @@
-export { CdsSidenavModule } from './sidenav.module';
+export * from './public-api';

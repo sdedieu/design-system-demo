@@ -1,1 +1,1 @@
-export { CdsPaginatorModule } from './paginator.module';
+export * from './public-api';

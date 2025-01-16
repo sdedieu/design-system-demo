@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdsCardModule } from '@cds-library';
+import { CdsCardModule } from '@cds-library/card';
 import { EChartsCoreOption } from 'echarts';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import { AGE_DISTRIBUTION_DATA, CAMPAIGN_IMPRESSION_OVER_TIME_DATA, COUNTRY_DISTRIBUTION_DATA, GENDER_DISTRIBUTION_DATA } from '@mock-data';

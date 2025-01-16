@@ -1,1 +1,1 @@
-export { CdsHeaderComponent } from './header.component';
+export * from './public-api';

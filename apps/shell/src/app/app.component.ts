@@ -1,13 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { Component, effect, inject, ViewChild, ViewEncapsulation } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { MatSidenav } from '@angular/material/sidenav';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
-import { CdsPageComponent, CdsBadgeModule, CdsHeaderComponent, CdsSidenavModule, CdsListModule, CdsButtonModule, CdsIconModule } from '@cds-library';
+import { CdsPageComponent } from '@cds-library/page';
+import { CdsBadgeModule } from '@cds-library/badge';
+import { CdsSidenavModule } from '@cds-library/sidenav';
+import { CdsListModule } from '@cds-library/list';
+import { CdsButtonModule } from '@cds-library/button';
+import { CdsIconModule } from '@cds-library/icon';
+import { CdsHeaderComponent } from '@cds-library/header';
+import { CdsDividerModule } from '@cds-library/divider';
+
 import { filter, map } from 'rxjs';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
-  imports: [RouterModule, CdsSidenavModule, CdsListModule, CdsButtonModule, CdsBadgeModule, CdsIconModule, CdsHeaderComponent, CdsPageComponent, CommonModule],
+  imports: [
+    RouterModule,
+    CdsSidenavModule,
+    CdsListModule,
+    CdsButtonModule,
+    CdsBadgeModule,
+    CdsIconModule,
+    CdsHeaderComponent,
+    CdsPageComponent,
+    CdsDividerModule,
+    CommonModule,
+  ],
   selector: 'ds-shl-root',
   template: `
     <mat-sidenav-container (backdropClick)="close()">

@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@cds-library": ["libs/cds-library/src/index.ts"],
+      "@cds-library/*": ["dist/libs/cds-library/src/lib/cds-library/components/*"],
       "@cds-styles": ["libs/cds-styles/src/index.ts"],
       "@mock-data": ["libs/mock-data/src/index.ts"],
       "analytics/Routes": ["apps/analytics/src/app/remote-entry/entry.routes.ts"],

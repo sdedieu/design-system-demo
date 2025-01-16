@@ -1,1 +1,1 @@
-export { CdsIconModule } from './icon.module';
+export * from './public-api';

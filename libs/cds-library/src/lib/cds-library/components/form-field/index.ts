@@ -1,1 +1,1 @@
-export { CdsFormFieldModule } from './form-field.module';
+export * from './public-api';

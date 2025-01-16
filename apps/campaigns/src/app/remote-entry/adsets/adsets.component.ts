@@ -1,9 +1,13 @@
 import { CurrencyPipe } from '@angular/common';
 import { Component, viewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { CdsTableModule, CdsButtonModule, CdsIconModule, CdsCardModule, CdsPaginatorModule } from '@cds-library';
+import { CdsTableModule } from '@cds-library/table';
+import { CdsCardModule } from '@cds-library/card';
+import { CdsPaginatorModule } from '@cds-library/paginator';
+import { CdsButtonModule } from '@cds-library/button';
+import { CdsIconModule } from '@cds-library/icon';
 import { ADSET_DATA } from '@mock-data';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   imports: [CdsTableModule, CdsButtonModule, CdsIconModule, CdsCardModule, CdsPaginatorModule, CurrencyPipe],

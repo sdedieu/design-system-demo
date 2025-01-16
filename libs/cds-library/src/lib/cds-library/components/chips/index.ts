@@ -1,1 +1,1 @@
-export { CdsChipsModule } from './chips.module';
+export * from './public-api';

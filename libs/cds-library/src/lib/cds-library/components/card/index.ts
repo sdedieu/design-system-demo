@@ -1,1 +1,1 @@
-export { CdsCardModule } from './card.module';
+export * from './public-api';

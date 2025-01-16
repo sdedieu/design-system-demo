@@ -1,1 +1,1 @@
-export { CdsListModule } from './list.module';
+export * from './public-api';

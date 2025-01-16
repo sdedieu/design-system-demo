@@ -1,1 +1,1 @@
-export { CdsPageComponent } from './page.component';
+export * from './public-api';
