@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@cds-library/*": ["dist/libs/cds-library/src/lib/cds-library/components/*"],
+      "@cds-library/theming": ["libs/cds-library/src/lib/cds-library/theming/index.ts"],
       "@cds-styles": ["libs/cds-styles/src/index.ts"],
       "@mock-data": ["libs/mock-data/src/index.ts"],
       "analytics/Routes": ["apps/analytics/src/app/remote-entry/entry.routes.ts"],

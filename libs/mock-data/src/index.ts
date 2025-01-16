@@ -732,7 +732,6 @@ function generateCountriesRace(campaigns: Campaign[]): EChartsCoreOption[] {
         type: 'bar',
         itemStyle: {
           color: function (param: { value: (keyof typeof countryColors)[] }) {
-            console.log(param.value[3], countryColors[param.value[3]]);
             return countryColors[param.value[3]] || '#5470c6';
           },
         },

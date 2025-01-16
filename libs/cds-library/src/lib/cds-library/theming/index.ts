@@ -1,1 +1,1 @@
-export * from './theming.model';
+export * from './public-api';
