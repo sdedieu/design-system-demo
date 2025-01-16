@@ -29,7 +29,7 @@ module.exports = {
       addComponents({
         '.divider': {
           '--mat-divider-width': '1px',
-          '--mat-divider-color': 'red',
+          '--mat-divider-color': '#cbcdd2',
         },
         '.btn': {
           padding: '.5rem 1rem',

@@ -46,9 +46,7 @@ export class CdsButtonDirective implements AfterContentInit {
     @Optional()
     @Inject(CDS_BUTTON_DEFAULT_OPTIONS)
     private _defaultOptions?: CdsButtonDefaultOptions
-  ) {
-    console.log(this._defaultOptions);
-  }
+  ) {}
 
   ngAfterContentInit(): void {
     this._size = this._defaultOptions?.size || this._size;
