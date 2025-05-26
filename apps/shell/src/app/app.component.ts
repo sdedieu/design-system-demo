@@ -52,10 +52,11 @@ import { MatSidenav } from '@angular/material/sidenav';
 
       <mat-sidenav-content>
         <cds-header>
-          <div start>
+          <div start class="cds-flex cds-justify-between cds-items-center cds-gap-2">
             <button (click)="sidenav.open()" mat-icon-button aria-label="Open menu">
               <mat-icon>menu</mat-icon>
             </button>
+
             <img class="orange-logo" src="https://www.criteo.com/fr/wp-content/themes/criteo2017/img/criteo-logo-orange.svg" alt="Criteo" />
           </div>
           <div end>

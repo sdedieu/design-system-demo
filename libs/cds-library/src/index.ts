@@ -1,1 +1,1 @@
-export * from './lib/cds-library/public-api';
+export default void 0;

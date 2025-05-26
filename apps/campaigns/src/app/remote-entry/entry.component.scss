@@ -9,7 +9,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:host {
+:host,
+:root {
   --mat-sys-background: #fff8f8;
   --mat-sys-error: #ba1a1a;
   --mat-sys-error-container: #ffdad6;

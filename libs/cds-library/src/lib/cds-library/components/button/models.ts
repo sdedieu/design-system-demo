@@ -25,13 +25,7 @@ export const CdsSemanticIcons: { [key in CdsSemanticVariations]?: string } = {
 };
 
 export const sizes = ['x-small', 'small', 'medium', 'large'] as const;
-export type CdsSize = typeof sizes[number];
+export type CdsSize = (typeof sizes)[number];
 
-export const types = [
-  'very-weak',
-  'weak',
-  'medium',
-  'strong',
-  'very-strong',
-] as const;
-export type CdsType = typeof types[number];
+export const types = ['very-weak', 'weak', 'medium', 'strong', 'very-strong'] as const;
+export type CdsType = (typeof types)[number];

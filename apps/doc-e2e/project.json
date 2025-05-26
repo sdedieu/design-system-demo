@@ -1,0 +1,10 @@
+{
+  "name": "doc-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/doc-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["doc"],
+  "// targets": "to see all targets run: nx show project doc-e2e --web",
+  "targets": {}
+}

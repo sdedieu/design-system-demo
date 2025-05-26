@@ -12,7 +12,6 @@ import { filter, map } from 'rxjs';
   imports: [CdsButtonModule, CdsChipsModule, CdsTabsModule, CdsIconModule, RouterLink, RouterOutlet, TitleCasePipe],
   selector: 'ds-cmp-campaigns-dashboard',
   template: `<h1>Campaigns</h1>
-    <button mat-button></button>
     <div class="cds-flex cds-justify-between">
       <nav mat-tab-nav-bar [tabPanel]="tabPanel">
         @for (link of links; track link) {

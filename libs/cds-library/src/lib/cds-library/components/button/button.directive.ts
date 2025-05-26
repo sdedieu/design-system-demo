@@ -1,6 +1,5 @@
-import { AfterContentInit, Directive, Inject, InjectionToken, Input, Optional } from '@angular/core';
-import { CdsSemanticVariations, CdsSize, CdsType } from './theming.model';
-
+import { AfterContentInit, Directive, ElementRef, Inject, InjectionToken, Input, Optional } from '@angular/core';
+import { CdsSize, CdsSemanticVariations, CdsType } from './models';
 export type CdsButtonColor = Extract<CdsSemanticVariations, 'accent' | 'primary' | 'secondary' | 'destructive'>;
 
 export interface CdsButtonDefaultOptions {
@@ -15,6 +14,7 @@ export const CDS_BUTTON_HOST = {
   '[attr.cds-size]': '_size || null',
   '[attr.cds-type]': '_type || null',
   '[class]': '_color ? "cds-button mat-" + _color : "cds-button"',
+  '[class.mat-mdc-unelevated-button]': 'true',
 };
 
 @Directive({
