@@ -249,6 +249,11 @@
   --mat-tab-header-label-text-weight: var(--mat-sys-title-small-weight);
 }
 
+:host {
+  --mdc-filled-button-label-text-color: var(--mat-sys-on-primary);
+  --mdc-filled-button-container-color: var(--mat-sys-primary);
+}
+
 h1 {
   color: var(--accent-5);
 }

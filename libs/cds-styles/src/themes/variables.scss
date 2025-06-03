@@ -7,6 +7,7 @@
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 24px;
+  --radius-xl: 36px;
   --radius-full: 50%;
 
   /*
@@ -72,13 +73,9 @@
   /*
       Elevation
   */
-  --elevation-none: 0px 0px 0px 0px rgba(24, 39, 75, 0.2),
-    0px 0px 0px 0px rgba(24, 39, 75, 0.14),
-    0px 0px 0px 0px rgba(24, 39, 75, 0.12);
-  --elevation-4dp: 0px 8px 16px -6px rgba(24, 39, 75, 0.08),
-    0px 6px 8px -6px rgba(24, 39, 75, 0.12);
-  --elevation-8dp: 0px 2px 6px 0px rgba(0, 0, 0, 0.04),
-    0px 16px 24px 0px rgba(0, 0, 0, 0.06), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --elevation-none: 0px 0px 0px 0px rgba(24, 39, 75, 0.2), 0px 0px 0px 0px rgba(24, 39, 75, 0.14), 0px 0px 0px 0px rgba(24, 39, 75, 0.12);
+  --elevation-4dp: 0px 8px 16px -6px rgba(24, 39, 75, 0.08), 0px 6px 8px -6px rgba(24, 39, 75, 0.12);
+  --elevation-8dp: 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 16px 24px 0px rgba(0, 0, 0, 0.06), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
   /*
     Media queries

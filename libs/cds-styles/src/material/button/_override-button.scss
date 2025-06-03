@@ -58,5 +58,10 @@
         state-layer-size: var(--height-4),
       )
     );
+
+    .mat-icon {
+      height: var(--height-2);
+      width: var(--height-2);
+    }
   }
 }

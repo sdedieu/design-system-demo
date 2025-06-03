@@ -7,9 +7,10 @@ import { provideEchartsCore } from 'ngx-echarts';
 import * as echarts from 'echarts/core';
 import { BarChart, LineChart, PieChart } from 'echarts/charts';
 import { GridComponent, TooltipComponent, LegendComponent, GraphicComponent } from 'echarts/components';
+import { TitleComponent } from 'echarts/components';
 import { SVGRenderer } from 'echarts/renderers';
 
-echarts.use([BarChart, PieChart, TooltipComponent, GraphicComponent, LegendComponent, GridComponent, SVGRenderer, LineChart]);
+echarts.use([BarChart, PieChart, TooltipComponent, GraphicComponent, LegendComponent, GridComponent, SVGRenderer, LineChart, TitleComponent]);
 
 @Component({
   imports: [CdsCardModule, NgxEchartsDirective],
