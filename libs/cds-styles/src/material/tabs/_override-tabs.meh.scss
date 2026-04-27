@@ -1,18 +1,18 @@
 @mixin main() {
     :root {
-        --mdc-tab-height: var(--height-5);
-        --mdc-tab-padding-horizontal: var(--spacing-0-5);
-        --mdc-tab-border-radius: var(--radius-md);
-        --mdc-tab-text-color: var(--color-text-secondary-very-weak-default);
-        --mdc-tab-text-color-disabled: var(--color-text-disabled);
-        --mdc-tab-indicator-color: var(--color-border-neutral-very-weak-default);
-        --mdc-tab-indicator-color-active: var(--color-background-neutral-very-strong-default);
-        --mdc-tab-background-color-hover: var(--color-background-secondary-very-weak-hover);
-        --mdc-tab-text-color-hover: var(--color-text-secondary-very-weak-hover);
-        --mdc-tab-background-color-pressed: var(--color-background-secondary-very-weak-pressed);
-        --mdc-tab-text-color-pressed: var(--color-text-secondary-very-weak-pressed);
-        --mdc-tab-background-color-active: var(--color-background-secondary-very-weak-activated);
-        --mdc-tab-text-color-selected: var(--color-text-secondary-very-weak-selected);
+        --mat-tab-height: var(--height-5);
+        --mat-tab-padding-horizontal: var(--spacing-0-5);
+        --mat-tab-border-radius: var(--radius-md);
+        --mat-tab-text-color: var(--color-text-secondary-very-weak-default);
+        --mat-tab-text-color-disabled: var(--color-text-disabled);
+        --mat-tab-color: var(--color-border-neutral-very-weak-default);
+        --mat-tab-color-active: var(--color-background-neutral-very-strong-default);
+        --mat-tab-background-color-hover: var(--color-background-secondary-very-weak-hover);
+        --mat-tab-text-color-hover: var(--color-text-secondary-very-weak-hover);
+        --mat-tab-background-color-pressed: var(--color-background-secondary-very-weak-pressed);
+        --mat-tab-text-color-pressed: var(--color-text-secondary-very-weak-pressed);
+        --mat-tab-background-color-active: var(--color-background-secondary-very-weak-activated);
+        --mat-tab-text-color-selected: var(--color-text-secondary-very-weak-selected);
     }
 
     .mat-mdc-tab-list {
@@ -30,9 +30,9 @@
 
 @mixin typography($typography-config) {
     :root {
-        --mdc-typography-tab-label-font-family: #{levels-mixins.p2-bold().font-family};
-        --mdc-typography-tab-label-font-size: #{levels-mixins.p2-bold().font-size};
-        --mdc-typography-tab-label-font-weight: #{levels-mixins.p2-bold().font-weight};
+        --mat-typography-tab-label-font-family: #{levels-mixins.p2-bold().font-family};
+        --mat-typography-tab-label-font-size: #{levels-mixins.p2-bold().font-size};
+        --mat-typography-tab-label-font-weight: #{levels-mixins.p2-bold().font-weight};
     }
 }
 

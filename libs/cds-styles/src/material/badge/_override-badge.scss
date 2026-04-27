@@ -1,17 +1,22 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
 @use '../../themes/light-theme' as theme;
+@use '../../themes/fonts/typography' as typography;
+
+$_text: map.get(typography.$nani-typography-config, 'p2-reg');
 
 :root,
 :host {
   @include mat.badge-overrides(
     (
-      background-color: mat.get-theme-color(theme.$nani-light-theme, accent, default),
+      // M2 `accent` palette is exposed as `tertiary` in M3.
+      background-color: mat.get-theme-color(theme.$nani-light-theme, tertiary, 40),
       text-color: theme.$default-text-color,
       container-shape: var(--radius-full),
       small-size-container-size: var(--width-1-5),
-      text-font: mat.get-theme-typography(theme.$nani-light-theme, 'p2-reg', font-family),
-      text-size: mat.get-theme-typography(theme.$nani-light-theme, 'p2-reg', font-size),
-      text-weight: mat.get-theme-typography(theme.$nani-light-theme, 'p2-reg', font-weight),
+      text-font: map.get($_text, font-family),
+      text-size: map.get($_text, font-size),
+      text-weight: map.get($_text, font-weight),
     )
   );
 }

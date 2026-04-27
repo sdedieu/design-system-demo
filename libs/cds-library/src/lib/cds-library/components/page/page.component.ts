@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'cds-page',
   template: `
     <main class="cds-page">

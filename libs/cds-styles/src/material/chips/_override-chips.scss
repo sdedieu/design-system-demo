@@ -1,5 +1,9 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
 @use '../../themes/light-theme' as theme;
+@use '../../themes/fonts/typography' as typography;
+
+$_label-typo: map.get(typography.$nani-typography-config, 'p2-bold');
 
 :root,
 :host {
@@ -9,12 +13,13 @@
       elevated-selected-container-color: var(--announcement-7),
       outline-width: 0,
       label-text-color: var(--announcement-7),
-      selected-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, text),
+      // M2 hue 50 (`primary, text`) → M3 hue 100.
+      selected-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, 100),
       container-height: var(--height-3),
-      label-text-font: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', font-family),
-      label-text-line-height: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', line-height),
-      label-text-size: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', font-size),
-      label-text-weight: mat.get-theme-typography(theme.$nani-light-theme, 'p2-bold', font-weight),
+      label-text-font: map.get($_label-typo, font-family),
+      label-text-line-height: map.get($_label-typo, line-height),
+      label-text-size: map.get($_label-typo, font-size),
+      label-text-weight: map.get($_label-typo, font-weight),
     )
   );
 }

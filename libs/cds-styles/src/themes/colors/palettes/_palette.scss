@@ -1,58 +1,107 @@
+@use 'sass:map';
 @forward './index.scss';
 
+// Material 3 palettes. Material 3 expects palette hues to range 0..100 (with 0
+// being darkest and 100 being lightest), which is the inverse of the M2
+// 50..900 convention used previously.
+//
+// We map the existing 10-stop CDS palettes (`--<name>-0` … `--<name>-9`) to
+// the 16-hue M3 contract, preserving the previously-used colors:
+//   - M2 default (500) → M3 primary role (hue 40) → `--<name>-5`
+//   - M2 lighter (300) → hue 60                   → `--<name>-3`
+//   - M2 darker  (700) → hue 30                   → `--<name>-7`
+//   - M2 text    (50)  → hue 100                  → `--<name>-0`
+//
+// The expected palette shape (top-level + nested `secondary`, `neutral`,
+// `neutral-variant`, `error`) is enforced by Material's M3 validator. The
+// `neutral` palette additionally needs the 4/6/12/17/22/24/87/92/94/96 hues
+// used for surface containers; we approximate them with the nearest CDS stop.
+
+@function _hues($name) {
+  @return (
+    0: var(--#{$name}-9),
+    10: var(--#{$name}-9),
+    20: var(--#{$name}-8),
+    25: var(--#{$name}-8),
+    30: var(--#{$name}-7),
+    35: var(--#{$name}-7),
+    40: var(--#{$name}-5),
+    50: var(--#{$name}-4),
+    60: var(--#{$name}-3),
+    70: var(--#{$name}-2),
+    80: var(--#{$name}-2),
+    90: var(--#{$name}-1),
+    95: var(--#{$name}-0),
+    98: var(--#{$name}-0),
+    99: var(--#{$name}-0),
+    100: var(--#{$name}-0),
+  );
+}
+
+// `neutral-variant` is validated to contain exactly the 16 standard hues.
+$_neutral-variant-m3: _hues('neutral');
+
+// `neutral` additionally needs the 4/6/12/17/22/24/87/92/94/96 hues used by
+// M3 to derive surface container variations; we approximate them with the
+// nearest CDS stop.
+$_neutral-m3: map.merge(
+  $_neutral-variant-m3,
+  (
+    4: var(--neutral-9),
+    6: var(--neutral-9),
+    12: var(--neutral-8),
+    17: var(--neutral-8),
+    22: var(--neutral-8),
+    24: var(--neutral-8),
+    87: var(--neutral-1),
+    92: var(--neutral-1),
+    94: var(--neutral-0),
+    96: var(--neutral-0),
+  )
+);
+
+$_accent-m3: _hues('accent');
+$_warn-m3: _hues('warn');
+
+// Primary palette consumed by `mat.define-theme()`. M3 requires the primary
+// palette to embed `secondary`, `neutral`, `neutral-variant`, and `error`
+// sub-palettes.
 $material-palette-primary: (
-  // 0 doesn't exist in palettes, using 50 instead
-  50: var(--primary-0),
-  100: var(--primary-1),
-  200: var(--primary-2),
-  300: var(--primary-3),
-  400: var(--primary-4),
-  500: var(--primary-5),
-  600: var(--primary-6),
-  700: var(--primary-7),
-  800: var(--primary-8),
-  900: var(--primary-9),
-  contrast: ()
+  0: var(--primary-9),
+  10: var(--primary-9),
+  20: var(--primary-8),
+  25: var(--primary-8),
+  30: var(--primary-7),
+  35: var(--primary-7),
+  40: var(--primary-5),
+  50: var(--primary-4),
+  60: var(--primary-3),
+  70: var(--primary-2),
+  80: var(--primary-2),
+  90: var(--primary-1),
+  95: var(--primary-0),
+  98: var(--primary-0),
+  99: var(--primary-0),
+  100: var(--primary-0),
+  secondary: $_accent-m3,
+  neutral: $_neutral-m3,
+  neutral-variant: $_neutral-variant-m3,
+  error: $_warn-m3,
 );
 
-$material-palette-accent: (
-  50: var(--accent-0),
-  100: var(--accent-1),
-  200: var(--accent-2),
-  300: var(--accent-3),
-  400: var(--accent-4),
-  500: var(--accent-5),
-  600: var(--accent-6),
-  700: var(--accent-7),
-  800: var(--accent-8),
-  900: var(--accent-9),
-  contrast: (),
+// The M2 `accent` palette is exposed as `tertiary` in M3. The validator
+// requires the same complete shape as the primary palette, so we attach the
+// same nested sub-palettes.
+$material-palette-tertiary: map.merge(
+  $_accent-m3,
+  (
+    secondary: $_accent-m3,
+    neutral: $_neutral-m3,
+    neutral-variant: $_neutral-variant-m3,
+    error: $_warn-m3,
+  )
 );
 
-$material-palette-warn: (
-  50: var(--warn-0),
-  100: var(--warn-1),
-  200: var(--warn-2),
-  300: var(--warn-3),
-  400: var(--warn-4),
-  500: var(--warn-5),
-  600: var(--warn-6),
-  700: var(--warn-7),
-  800: var(--warn-8),
-  900: var(--warn-9),
-  contrast: (),
-);
-
-$material-palette-neutral: (
-  50: var(--neutral-0),
-  100: var(--neutral-1),
-  200: var(--neutral-2),
-  300: var(--neutral-3),
-  400: var(--neutral-4),
-  500: var(--neutral-5),
-  600: var(--neutral-6),
-  700: var(--neutral-7),
-  800: var(--neutral-8),
-  900: var(--neutral-9),
-  contrast: (),
-);
+// Kept for backwards compatibility with consumers that imported these names.
+$material-palette-warn: $_warn-m3;
+$material-palette-neutral: $_neutral-m3;

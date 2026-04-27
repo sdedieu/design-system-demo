@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { AnalyticsDashboardComponent } from './analytics.component';
 
 @Component({
-  imports: [CommonModule, AnalyticsDashboardComponent],
+  imports: [AnalyticsDashboardComponent],
   selector: 'app-analytics-entry',
   template: `<ds-ana-analytics-dashboard />`,
   styleUrls: ['./entry.component.scss'],

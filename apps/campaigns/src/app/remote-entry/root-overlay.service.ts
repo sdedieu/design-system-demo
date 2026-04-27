@@ -1,7 +1,7 @@
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Platform } from '@angular/cdk/platform';
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable, InjectionToken } from '@angular/core';
+
+import { Inject, Injectable, InjectionToken, DOCUMENT } from '@angular/core';
 
 export const SAT_APP_ENTRY_COMPONENT_NAME = new InjectionToken<string>('SatAppEntryComponentName');
 
@@ -21,7 +21,7 @@ export class WebComponentOverlayContainer extends OverlayContainer {
       this._createContainer();
     }
 
-    return this._containerElement;
+    return this._containerElement!;
   }
 
   public createContainer(): void {

@@ -1,19 +1,23 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
 @use '../../themes/light-theme' as theme;
+@use '../../themes/fonts/typography' as typography;
+
+$_button-typo: map.get(typography.$nani-typography-config, 'button');
 
 :root,
 :host {
   @include mat.button-overrides(
     (
-      filled-container-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
-      filled-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, text),
-      filled-label-text-font: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-family),
-      filled-label-text-size: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-size),
-      filled-label-text-weight: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-weight),
+      filled-container-color: mat.get-theme-color(theme.$nani-light-theme, primary, 40),
+      filled-label-text-color: mat.get-theme-color(theme.$nani-light-theme, primary, 100),
+      filled-label-text-font: map.get($_button-typo, font-family),
+      filled-label-text-size: map.get($_button-typo, font-size),
+      filled-label-text-weight: map.get($_button-typo, font-weight),
       filled-container-shape: theme.$default-container-radius,
-      filled-disabled-container-color: mat.get-theme-color(theme.$nani-light-theme, background, disabled-button),
-      filled-disabled-label-text-color: mat.get-theme-color(theme.$nani-light-theme, foreground, disabled-button),
-      filled-ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, darker),
+      filled-disabled-container-color: theme.$default-disabled-button-bg,
+      filled-disabled-label-text-color: theme.$default-disabled-button-fg,
+      filled-ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, 30),
       filled-hover-state-layer-opacity: 0.1,
       filled-focus-state-layer-opacity: 0.1,
       filled-pressed-state-layer-opacity: 0.4,
@@ -23,21 +27,21 @@
 
   @include mat.fab-overrides(
     (
-      container-color: mat.get-theme-color(theme.$nani-light-theme, primary, default),
+      container-color: mat.get-theme-color(theme.$nani-light-theme, primary, 40),
       container-shape: theme.$default-container-radius,
-      foreground-color: mat.get-theme-color(theme.$nani-light-theme, primary, text),
-      extended-label-text-font: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-family),
-      extended-label-text-size: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-size),
-      extended-label-text-weight: mat.get-theme-typography(theme.$nani-light-theme, 'button', font-weight),
+      foreground-color: mat.get-theme-color(theme.$nani-light-theme, primary, 100),
+      extended-label-text-font: map.get($_button-typo, font-family),
+      extended-label-text-size: map.get($_button-typo, font-size),
+      extended-label-text-weight: map.get($_button-typo, font-weight),
       extended-container-shape: theme.$default-container-radius,
       extended-container-height: var(--height-5),
       extended-container-elevation-shadow: none,
       extended-focus-container-elevation-shadow: none,
       extended-hover-container-elevation-shadow: none,
       extended-pressed-container-elevation-shadow: none,
-      ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, darker),
-      disabled-state-container-color: mat.get-theme-color(theme.$nani-light-theme, background, disabled-button),
-      disabled-state-foreground-color: mat.get-theme-color(theme.$nani-light-theme, foreground, disabled-button),
+      ripple-color: mat.get-theme-color(theme.$nani-light-theme, primary, 30),
+      disabled-state-container-color: theme.$default-disabled-button-bg,
+      disabled-state-foreground-color: theme.$default-disabled-button-fg,
       state-layer-color: theme.$default-background-color,
       hover-state-layer-opacity: 0.1,
       focus-state-layer-opacity: 0.1,

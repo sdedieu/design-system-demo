@@ -1,5 +1,9 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
 @use '../../themes/light-theme' as theme;
+@use '../../themes/fonts/typography' as typography;
+
+$_text-typo: map.get(typography.$nani-typography-config, 'p1-reg');
 
 :root,
 :host {
@@ -7,7 +11,7 @@
     (
       container-text-color: theme.$default-text-color,
       enabled-icon-color: theme.$default-text-color,
-      container-text-font: mat.get-theme-typography(theme.$nani-light-theme, p1-reg, font-family),
+      container-text-font: map.get($_text-typo, font-family),
       form-field-container-vertical-padding: var(--spacing-1),
     )
   );
