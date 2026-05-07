@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start:all": "nx run-many --target=serve --projects=analytics,campaigns,doc,settings,shell --parallel=5"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "21.2.8",
     "@angular-devkit/core": "21.2.8",
