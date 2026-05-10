@@ -6,6 +6,7 @@
   @include mat.sidenav-overrides(
     (
       container-background-color: theme.$default-background-color,
+      container-elevation-shadow: 1px 1px 0 0 theme.$default-border-color,
     )
   );
 }

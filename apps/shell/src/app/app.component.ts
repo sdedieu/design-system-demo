@@ -35,18 +35,25 @@ import { MatSidenav } from '@angular/material/sidenav';
           <mat-icon>close</mat-icon>
         </button>
 
-        <mat-nav-list>
-          @for (section of menu; track section.order) { @if (section.display) {
+        <mat-nav-list class="cds-px-12">
+          @for (section of menu; track section.order) { @if (section.display) { @if (section.route) {
+          <a class="cds-px-4" mat-list-item [routerLink]="section.route" routerLinkActive="active" [activated]="section.isActive">
+            <mat-icon matListItemIcon>{{ section.icon }}</mat-icon>
+            <div matListItemTitle>{{ section.name | uppercase }}</div>
+          </a>
+          } @else {
           <div mat-subheader class="cds-flex cds-items-center cds-gap-4 cds-p1-bold" [class.active]="section.isActive">
             <mat-icon matListItemIcon>{{ section.icon }}</mat-icon>
             <div>{{ section.name | uppercase }}</div>
           </div>
-          } @for (page of section.pages; track page.order) {
-          <a mat-list-item [routerLink]="page.route" routerLinkActive="active" [activated]="page.isActive">
-            <mat-icon matListItemIcon>{{ page.icon ?? 'arrow_right' }}</mat-icon>
+          } } @for (page of section.pages; track page.order) {
+          <a class="cds-px-14" mat-list-item [routerLink]="page.route" routerLinkActive="active" [activated]="page.isActive">
             <div matListItemTitle>{{ page.name | titlecase }}</div>
           </a>
-          } }
+          }
+
+          <mat-divider class="cds-my-4 cds-mx-4"></mat-divider>
+          }
         </mat-nav-list>
       </mat-sidenav>
 
@@ -99,17 +106,18 @@ export class AppComponent {
   menu = [
     {
       order: 1,
-      name: '',
-      icon: null,
-      display: false,
+      name: 'homepage',
+      icon: 'home',
+      display: true,
       isActive: false,
-      pages: [{ order: 1, icon: 'home', name: 'homepage', route: '', isActive: false }],
+      route: 'homepage',
     },
     {
       order: 2,
       name: 'manage & mesure',
       icon: 'graphic_eq',
       display: true,
+      route: null,
       pages: [
         { order: 1, icon: null, name: 'campaigns', route: 'campaigns', isActive: false },
         { order: 2, icon: null, name: 'analytics', route: 'analytics', isActive: false },
@@ -120,8 +128,8 @@ export class AppComponent {
   constructor() {
     effect(() => {
       this.menu.forEach(m => {
-        m.isActive = !!m.pages.find(m => m.route === this.urlSegment());
-        m.pages.forEach(p => (p.isActive = p.route === this.urlSegment()));
+        m.isActive = !!m.pages?.find(m => m.route === this.urlSegment());
+        m.pages?.forEach(p => (p.isActive = p.route === this.urlSegment()));
       });
     });
   }

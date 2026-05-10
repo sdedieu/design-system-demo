@@ -14,7 +14,7 @@ import { MatPaginator } from '@angular/material/paginator';
   selector: 'ds-cmp-ad-sets',
   template: `
     <div class="cds-flex cds-justify-end cds-gap-1 cds-mb-4">
-      <button extended mat-fab><mat-icon>add</mat-icon> Add Adset</button>
+      <button mat-flat-button><mat-icon>add</mat-icon> Add Adset</button>
     </div>
     <mat-card appearance="outlined">
       <mat-card-content>
