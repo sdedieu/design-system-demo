@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { AfterViewInit, Component, viewChild } from '@angular/core';
+import { AfterViewInit, Component, inject, viewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { CdsTableModule } from '@cds-library/table';
 import { CdsCardModule } from '@cds-library/card';
@@ -8,13 +8,15 @@ import { CdsButtonModule } from '@cds-library/button';
 import { CdsIconModule } from '@cds-library/icon';
 import { CAMPAIGN_DATA } from '@mock-data';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { CreateCampaignDialog } from './create-campaign/create-campaign';
 
 @Component({
   imports: [CdsTableModule, CdsCardModule, CdsPaginatorModule, CdsButtonModule, CdsIconModule, CurrencyPipe],
   selector: 'ds-cmp-campaigns',
   template: `
     <div class="cds-flex cds-justify-end cds-gap-1 cds-mb-4">
-      <button mat-flat-button><mat-icon>add</mat-icon> Add Campaign</button>
+      <button mat-flat-button (click)="openDialog()"><mat-icon>add</mat-icon> Add Campaign</button>
     </div>
     <mat-card appearance="outlined">
       <mat-card-content>
@@ -91,7 +93,15 @@ export class Campaigns implements AfterViewInit {
 
   paginator = viewChild<MatPaginator>(MatPaginator);
 
+  dialog = inject(MatDialog);
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator()!;
+  }
+
+  openDialog() {
+    this.dialog.open(CreateCampaignDialog, {
+      panelClass: 'fullscreen',
+    });
   }
 }

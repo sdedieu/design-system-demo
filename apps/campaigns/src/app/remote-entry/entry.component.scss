@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-/*@import '../../../../../dist/cds-styles/nani-light.css';*/
+/* @import '../../../../../dist/cds-styles/nani-light.css'; */
 
 @use '../../../../../dist/cds-styles/themes/colors/palettes/index.css';
 @use '../../../../../dist/cds-styles/themes/variables.css';
@@ -254,6 +254,31 @@
   --mat-button-filled-container-color: var(--mat-sys-primary);
 }
 
+:host {
+  --mat-list-list-item-hover-label-text-color: var(--mat-sys-primary);
+}
+
+:host {
+  --mat-dialog-container-shape: 0;
+  --mat-dialog-container-color: var(--mat-sys-surface);
+  --mat-dialog-subhead-color: var(--mat-sys-on-surface);
+  --mat-dialog-title-text-color: var(--mat-sys-on-surface);
+  --mat-dialog-title-text-font: var(--mat-sys-title-small-font);
+  --mat-dialog-title-text-size: var(--mat-sys-title-small-size);
+  --mat-dialog-title-text-weight: var(--mat-sys-title-small-weight);
+  --mat-dialog-title-text-line-height: var(--mat-sys-title-small-line-height);
+  --mat-dialog-title-text-tracking: var(--mat-sys-title-small-tracking);
+  --mat-dialog-title-text-weight-prominent: var(--mat-sys-title-small-weight-prominent);
+  --mat-dialog-content-padding: var(--mat-sys-padding-large);
+  --mat-dialog-headline-padding: var(--mat-sys-padding-large);
+  --mat-dialog-actions-padding: var(--mat-sys-padding-large);
+  --mat-dialog-container-min-width: 100%;
+}
+
 h1 {
   color: var(--accent-5);
+}
+
+.cdk-overlay-pane.fullscreen {
+  min-height: 100dvh;
 }

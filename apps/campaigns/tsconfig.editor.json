@@ -2,12 +2,10 @@
   "extends": "./tsconfig.json",
   "include": [
     "src/**/*.ts",
-    "../shell/src/app/web-component.wrapper.ts"
+    "../shell/src/app/web-component.wrapper.ts",
+    "src/app/remote-entry/campaigns/create-campaign",
+    "../../libs/cds-library/src/lib/cds-library/core/overlay/root-overlay.service.ts"
   ],
   "compilerOptions": {},
-  "exclude": [
-    "jest.config.ts",
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts"
-  ]
+  "exclude": ["jest.config.ts", "src/**/*.test.ts", "src/**/*.spec.ts"]
 }

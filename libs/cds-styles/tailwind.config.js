@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   corePlugins: [
+    'textAlign',
     'display',
     'padding',
     'margin',
@@ -25,7 +26,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    plugin(function({ addComponents }) {
+    plugin(function ({ addComponents }) {
       addComponents({
         '.divider': {
           '--mat-divider-width': '1px',
@@ -58,9 +59,8 @@ module.exports = {
           },
         },
       });
-    })
+    }),
   ],
   prefix: 'cds-',
   important: true,
 };
-

@@ -3,6 +3,7 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
   {
     path: 'homepage',
+    providers: [],
     loadComponent: () => import('./homepage/homepage.component').then(m => m!.HomePageComponent),
   },
   {

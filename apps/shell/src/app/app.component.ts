@@ -10,9 +10,10 @@ import { CdsButtonModule } from '@cds-library/button';
 import { CdsIconModule } from '@cds-library/icon';
 import { CdsHeaderComponent } from '@cds-library/header';
 import { CdsDividerModule } from '@cds-library/divider';
-
 import { filter, map } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
+import { NotificationsDialogComponent } from './notifications-dialog/notifications-dialog.component';
 
 @Component({
   imports: [
@@ -64,7 +65,9 @@ import { MatSidenav } from '@angular/material/sidenav';
               <mat-icon>menu</mat-icon>
             </button>
 
-            <img class="orange-logo" src="https://www.criteo.com/fr/wp-content/themes/criteo2017/img/criteo-logo-orange.svg" alt="Criteo" />
+            <a routerLink="homepage">
+              <img class="orange-logo" src="https://www.criteo.com/fr/wp-content/themes/criteo2017/img/criteo-logo-orange.svg" alt="Criteo" />
+            </a>
           </div>
           <div end>
             <a href="https://www.criteo.com/fr/talk-to-an-expert/" target="_blank" mat-flat-button> Talk to an expert </a>
@@ -73,10 +76,12 @@ import { MatSidenav } from '@angular/material/sidenav';
         <cds-page>
           <div class="cds-flex cds-justify-between cds-items-center">
             <h1>Shell</h1>
-            <p class="cds-flex cds-items-center">
-              27 notifications
-              <mat-icon matBadge="1" matBadgeSize="small">notifications_active</mat-icon>
-            </p>
+            <button mat-button class="cds-flex cds-items-center" aria-label="Open notifications" (click)="openNotifications()">
+              {{ notificationCount }} notifications
+              <mat-icon [matBadge]="unreadNotificationCount" [matBadgeHidden]="unreadNotificationCount === 0" matBadgeSize="small">
+                notifications_active
+              </mat-icon>
+            </button>
           </div>
           <button mat-fab aria-label="Need help ? Chat with us" class="cds-fixed cds-right-8 cds-bottom-6 cds-z-10">
             <mat-icon>chat</mat-icon>
@@ -94,6 +99,9 @@ export class AppComponent {
 
   router = inject(Router);
   activatedRoute = inject(ActivatedRoute);
+  dialog = inject(MatDialog);
+  notificationCount = 5;
+  unreadNotificationCount = 3;
 
   urlSegment$ = this.router.events.pipe(
     filter(event => event instanceof NavigationEnd),
@@ -136,5 +144,18 @@ export class AppComponent {
 
   close() {
     this.sidenav.close();
+  }
+
+  openNotifications() {
+    const dialogRef = this.dialog.open<NotificationsDialogComponent, unknown, { unreadCount: number }>(NotificationsDialogComponent, {
+      autoFocus: false,
+      panelClass: ['cds-modal', 'medium'],
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.unreadNotificationCount = result.unreadCount;
+      }
+    });
   }
 }

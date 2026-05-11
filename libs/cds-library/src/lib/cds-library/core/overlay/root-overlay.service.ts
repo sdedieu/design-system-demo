@@ -11,7 +11,7 @@ export class WebComponentOverlayContainer extends OverlayContainer {
     @Inject(DOCUMENT)
     private readonly document: Document,
     platform: Platform,
-    @Inject(SAT_APP_ENTRY_COMPONENT_NAME) private entryComponentName: string
+    @Inject(SAT_APP_ENTRY_COMPONENT_NAME) private readonly entryComponentName: string
   ) {
     super(document, platform);
   }
@@ -22,10 +22,6 @@ export class WebComponentOverlayContainer extends OverlayContainer {
     }
 
     return this._containerElement!;
-  }
-
-  public createContainer(): void {
-    this._createContainer();
   }
 
   protected override _createContainer(): void {
@@ -43,7 +39,6 @@ export class WebComponentOverlayContainer extends OverlayContainer {
     rootElement.appendChild(this._containerElement);
   }
 
-  // In my case - I take this function to separate ShadowDomService
   private getRootElement(): ShadowRoot | HTMLElement {
     const shellShadowRoot = this.document.querySelector('ds-shl-root')?.shadowRoot;
     return (
