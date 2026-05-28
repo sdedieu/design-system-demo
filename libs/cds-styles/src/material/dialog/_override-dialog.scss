@@ -35,7 +35,8 @@ $_supporting-text-typo: map.get(typography.$nani-typography-config, 'p1-reg');
 
   .cdk-overlay-pane {
     &.fullscreen {
-      min-height: 100dvh;
+      height: 100dvh;
+      max-height: 100dvh;
 
       @include mat.dialog-overrides(
         (
@@ -43,6 +44,10 @@ $_supporting-text-typo: map.get(typography.$nani-typography-config, 'p1-reg');
           container-min-width: 100vw,
         )
       );
+
+      .mat-mdc-dialog-content {
+        max-height: none;
+      }
     }
   }
 }

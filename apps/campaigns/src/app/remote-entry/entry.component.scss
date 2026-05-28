@@ -273,6 +273,7 @@
   --mat-dialog-headline-padding: var(--mat-sys-padding-large);
   --mat-dialog-actions-padding: var(--mat-sys-padding-large);
   --mat-dialog-container-min-width: 100%;
+  --mat-dialog-content-padding: var(--spacing-4) var(--spacing-3);
 }
 
 h1 {
@@ -280,5 +281,10 @@ h1 {
 }
 
 .cdk-overlay-pane.fullscreen {
-  min-height: 100dvh;
+  height: 100dvh;
+  max-height: 100dvh;
+
+  .mat-mdc-dialog-content {
+    max-height: none;
+  }
 }
